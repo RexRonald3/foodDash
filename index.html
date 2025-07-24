@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">    
+    <title>Food Dash</title>
+</head>
+<body>
+    <!--validation-->
+    <!--heart-->
+    <!--animation-->
+    <div class="HomeScreen_viewCart" onclick="open_final_card()">
+        <i class="fa-solid fa-bag-shopping"></i> View Cart
+    </div>
+
+    <div class="privacyPolicy_background">
+        <div class="privacyPolicy_display">
+            <p class="privacyPolicy_heading"></p>
+            <div class="privacyPolicy_text"></div>
+            <div class="privacyPolicy_button_div"><button class="privacyPolicy_Closebutton" onclick="Close_PrivacyPolicy()">Close</button><button class="privacyPolicy_Acceptbutton" >Accept</button></div>
+        </div>
+
+        <div class="forgotPassword_display">
+            <div class="ForgotPassword_Notification"></div>
+            <div class="forgotPasswordText_input_div">
+                <p class="Company_name"><u><span class="orange">Food</span><span class="dash">Dash</span><span class="orange">.</span></u></p>
+
+                <p class="forgotPasswordText">Enter Your Registered Email and We will send you a Password Reset Link.</p>
+                <div class="input_email_div">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" id="ForgotPassword_email_input" placeholder="Enter a Registered Email" required>
+                </div>
+            </div>
+            <div class="forgotPassword_button_div"><button class="forgotPassword_Closebutton" onclick="Close_ForgotPassword()">Close</button><button class="forgotPassword_SendMailbutton" onclick="ForgotPassword_linkSending()">Send Link</button></div>
+
+        </div>
+    </div>
+
+    <section class="home" id="home">
+        <nav class="navBar">
+            <p><u><span class="orange">Food</span><span class="dash">Dash</span><span class="orange">.</span></u></p>
+            <ul class="nav_links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#offers">Offers</a></li>
+                <li><a href="#footer">About Us</a></li>
+            </ul>
+            <div>
+                <i class="fa-solid fa-cart-shopping" id="nav_cart_logo" onclick="open_final_card()"><div class="number_of_orders_display">0</div><div class="AddToCart_Notification">Item Added !!!</div></i>
+                <i class="fa-solid fa-arrow-right-to-bracket" title="Register/Login" onclick=OpenRegisterForm()></i>
+                <div  class="Profile_Logo">
+                    <div class="profile_dropdown_div">
+                        <div class="drop_down_profile_background">
+                            <i onclick=CloseProfile() class="fa-solid fa-xmark" id="fa-xmarks" title="Close"></i>
+                            <div class="profile_divs"></div>
+                        </div>
+                        
+                        <div class="profile_info">
+                            <table>
+                                <tr>
+                                    <td>Name :</td>
+                                    <td class="LargeProfile_NameInfo"></td>
+                                </tr>
+                                <tr>
+                                    <td>Email &nbsp;:</td>
+                                    <td class="LargeProfile_EmailInfo"></td>
+                                </tr>
+                            </table>
+                            <div class="logout_button" onclick=LogOut()>
+                                <i class="fa-solid fa-right-from-bracket"></i>&nbsp;Log Out
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div title="View Profile" class="profile_div" onclick=Profile_DropDown()></div>
+                </div>
+                
+                <div>
+                    <i onclick=OpenSideBar() class="fa-solid fa-bars" title="View Menu"></i>
+                    <aside  class="dropdown-icon-div">
+                        <div>
+                            <i onclick=CloseSideBar() class="fa-solid fa-xmark" id="fa-xmark" title="Close"></i>
+                        </div>
+                        <div class="drop-links-div">
+                        <ul class="drop-links">
+                            <a href="#home" onclick=CloseSideBar() ><li>Home</li></a>
+                            <a href="#menu" onclick=CloseSideBar()><li>Menu</li></a>
+                            <a href="#offers" onclick=CloseSideBar()><li>Offers</li></a>
+                            <a href="#footer" onclick=CloseSideBar()><li>About Us</li></a> 
+                        </ul>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </nav>
+        <!--dropdown-->
+
+        
+        
+
+
+        <div class="homeContentDiv">
+            <div class="homeContent"><p><span>Quick</span> and <span>Tasty</span> <br> <span>Food Delivered</span> with  <span>a <br>Dash of</span> Speed</p><button class="OrderNow" onclick="location.href='#menu'">Order Now</button><br><button class="trackOrder" onclick="Open_location()">Visit Us</button></div>
+            <div class="homepic"><img src="food1.jpg" alt=""></div>
+        </div>
+        
+        <div class="home-end" id="info">
+            <div><img src="fast-deli.png" alt=""><div class="fast-del-content"><h1>Fast Delivery</h1><p>Promise To Deliver <br>Within 30 Mins</p></div></div>
+            <div><img src="fresh-food.png" alt=""><div class="fast-del-content"><h1>Fresh Food</h1><p>Your Food Will Be Delivered <br>100% Fresh To Your Home.</p></div></div>
+            <div><img src="free-deli.png" alt=""><div class="fast-del-content"><h1>Free Delivery</h1><p>Your Food Delivery Is <br>absolutely Free. No Cost Just Order</p></div></div>            
+        </div>
+    </section>
+
+
+    <div class="Final_cart_background">
+        <div class="Final_cart_Card">
+            <i class="fa-solid fa-xmark" id="Cross_final_card" title="Close" onclick="close_final_card()"></i>
+            <p class="final_card_heading">Your Cart</p>
+            <p class="YourCartIsEmptyText_OR_TotalNoOfItems"></p>
+            <ul class="Added_items">Your Cart is Empty. Order Now!</ul>
+            <div class="final_card_bottom_div">
+                <div class="final_card_coupon_div">
+                    <i class="fa-solid fa-tags" id="final_card_discount_tags"></i>
+                    <input type="text" class="final_card_coupon_input" placeholder="Dicount Code">
+                    <div class="final_card_discount_EnterIcon_div" onclick="Applied_Discount()">
+                        <i class="fa-solid fa-arrow-right" id="final_card_discount_EnterIcon"></i>
+                    </div>
+                </div>
+                <div class="final_card_button_price_div">
+                    <div class="final_card_priceAndDetails_div">
+                        <div class="final_card_priceOnly_div">
+                            <p class="final_card_slashed_price"></p>
+                            <p class="final_card_actual_price"></p>
+                        </div>
+                        <div class="final_card_details_div">
+                            <div class="Detailstext_Icon_div" onclick="open_expnadedDetails()">
+                                <i class="fa-solid fa-circle-info"></i>
+                                <p class="final_card_priceText">Details</p>
+                            </div>
+                            <div class="Expanded_FinalCartDetails">
+                                <i class="fa-solid fa-xmark" id="Cross_final_card_details" title="Close" onclick="close_expnadedDetails()"></i>
+                                <ul>
+                                    <div><li>Total Amount </li><li class="ExpandedCard_TotalAmountDisplay">$0</li></div>
+                                    <div><li>Delivery Charge</li><li class="ExpandedCard_deliveryAmountDisplay"></li></div>
+                                    <div><li>Discount <button class="Discount_RemoveButton" onclick="discount_remove_button()">remove</button></li><li class="ExpandedCard_DiscountDisplay">0%</li></div>
+                                    <hr>
+                                    <div><li>Final Amount</li><li class="ExpandedCard_FinalFinalDisplay"></li></div>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="final_card_placeOrder_button" onclick="finalfinalfinalbutton()">Place Order</button>
+                </div>
+            </div>
+
+            <div class="FinalCard_Expanded_notification"></div>
+        </div>
+    </div>
+    
+    <section class="home2" id="special">
+        <div class="home2-tittle">
+            <div class="home2-topic"><p>Our <span class="orange">Best Delivered</span><br>Special Dish</p></div>
+            <div class="home2-content"><p>It's Not Just About Bringing You Good Food <br>From Restaurants, We Deliver You Experience.</p></div>
+        </div>
+        <div class="home2-foods">
+            <div class="home2-foods-1" ><div onclick="Open_home2_expanded_Card(this)"><img src="dess.jpg" alt=""><p>Indian Kaju <br>Katli <br></p></div><a  class="orange"  id="home2_order_button" onclick="AddToCart('● Indian Kaju Katli')">Add to Cart +</a></div>
+            <div class="home2-foods-2" ><div onclick="Open_home2_expanded_Card(this)"><img src="salad0.jpg" alt="" ><p> Grilled Chicken and <br>Caesar Salad <br></p></div><a  class="orange"  id="home2_order_button" onclick="AddToCart('● Grilled Chicken and Caesar Salad')">Add to Cart +</a></div>
+            <div class="home2-foods-3" ><div onclick="Open_home2_expanded_Card(this)"><img src="upma - Copy.jpg" alt=""><p>Chicken , Prawns<br>and Veggies Plater<br></p></div><a  class="orange"  id="home2_order_button" onclick="AddToCart('● Chicken , Prawns and Veggies Plater')">Add to Cart +</a></div>
+
+        </div>
+        <marquee behavior="" direction="left" id="multi_quisine">#Rajasthan&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#South indian&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#Gujarat &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#Maharastrta&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#West Bengal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#Kerala&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#Tamil Nadu&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#Mumbai&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#Goa&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#Kolkatta&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#Uttar Pradesh&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</marquee>
+         
+        <div class="home2food_card_background">
+            <div class="home2_expanded_Card" >
+                <i class="fa-solid fa-heart" id="Cross_Expanded_home2_FoodCard" ></i>
+                <div class="expanded_home2_image_div"></div>
+                <div class="home2_expanded_Content">
+                    <p class="home2_expanded_Food_Name"></p>
+                    <div class="home2_expanded_rating_vegan_div">
+                        <div class="expanded_rating"></div>
+                        <div class="expanded_veganTag"></div>
+                    </div>
+                    <p class="home2_expanded_foods_description"></p>
+                    <div class="home2_expanded_foods_nutrition_price_tag">
+                        <p class="home2_expanded_foods_nutrition_info"></p>
+                        <p class="home2_expanded_foods_price_info"></p>
+                    </div>
+                    <div class="home2_expanded_foodCard_buttons_div">
+                        <a onclick="Close_home2_expanded_Card()"><button class="home2_expanded_Back_button">< Back</button></a>
+                        <a><button class="home2_expanded_AddToCart_button">Add to Cart &nbsp;<i class="fa-solid fa-cart-shopping" id="home2_expanded_Cart_logo"></i></button></a>
+                    </div>
+                </div>
+
+                <div class="home2_ExpandedCard_notification">Item Added to Cart!!!</div>
+            </div>
+            
+        </div>
+    </section>
+
+    <section class="menu" id="menu">
+        <div class="menu-topic">
+            <span><section class="menu-tittle">Our <span class="orange">Regular</span> Menu</section> <br><p>There Are Our Regulr Menus. <br>You Can Order Anything You Like.</p></span>
+            <button onclick="location.href='#menu_start'" class="menu_topic_button">See All</button>
+        </div>
+        
+        <h1 id="menu_start" >STARTERS</h1>
+        <div class="food-menu" >
+            
+            <div class="foodmenu1" ><div onclick="Open_Menu_expanded_FoodCard(this)"><img src="gobi65.jpg" alt="" class="starter_1_img"><span class="orange">Tangy</span><p>Gobi Manchurian</p><div class="ratings"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>(100)</div></div><div class="price-tag"><p>$180</p><button onclick="AddToCart('● Gobi Manchurian')" class="BuyNow_But">Add +</button></div></div>
+            <div class="foodmenu1" ><div onclick="Open_Menu_expanded_FoodCard(this)"><img src="chicken65sss.jpg" alt="" class="starter_2_img"><span class="orange">Spicy</span><p>Chicken Manchurian</p><div class="ratings"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>(80)</div></div><div class="price-tag"><p>$250</p><button onclick="AddToCart('● Chicken Manchurian')" class="BuyNow_But">Add +</button></div></div>
+            <div class="foodmenu1" ><div onclick="Open_Menu_expanded_FoodCard(this)"><img src="butterChicken.jpg" alt="" class="starter_3_img"><span class="orange">Creamy</span><p>Butter Chicken</p><div class="ratings"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>(50)</div></div><div class="price-tag"><p>$300</p><button onclick="AddToCart('● Butter Chicken')" class="BuyNow_But">Add +</button></div></div>
+            <div class="foodmenu1" ><div onclick="Open_Menu_expanded_FoodCard(this)"><img src="mushroom.jpg" alt="" class="starter_4_img"><span class="orange">Smoky</span><p>Roasted Mushrooms</p><div class="ratings"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>(50)</div></div><div class="price-tag"><p>$200</p><button onclick="AddToCart('● Roasted Mushrooms')" class="BuyNow_But">Add +</button></div></div>
+
+        </div>
+        
+        <h1>MAIN - COURSE</h1>
+        <div class="food-menu">
+            <div class="foodmenu1" ><div onclick="Open_Menu_expanded_FoodCard(this)"><img src="dosa.jpg" alt="" class="MainCourse_1_img"><span class="orange">Crispy</span><p>Masala Dosa</p><div class="ratings"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>(120)</div></div><div class="price-tag"><p>$150</p><button onclick="AddToCart('● Masala Dosa')" class="BuyNow_But">Add +</button></div></div>
+            <div class="foodmenu1" ><div onclick="Open_Menu_expanded_FoodCard(this)"><img src="non-vegMeals.jpg" alt="" class="MainCourse_2_img"><span class="orange">Tasty</span><p>Non - Veg Meals</p><div class="ratings"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>(50)</div></div><div class="price-tag"><p>$250</p><button onclick="AddToCart('● Non - Veg Meals')" class="BuyNow_But">Add +</button></div></div>
+            <div class="foodmenu1" ><div onclick="Open_Menu_expanded_FoodCard(this)"><img src="briyani.jpeg" alt="" class="MainCourse_3_img"><span class="orange">Hydrabad</span><p>Special Briyani</p><div class="ratings"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>(500)</div></div><div class="price-tag"><p>$300</p><button onclick="AddToCart('● Special Briyani')" class="BuyNow_But">Add +</button></div></div>
+            <div class="foodmenu1" ><div onclick="Open_Menu_expanded_FoodCard(this)"><img src="vegbriyani.jpg" alt="" class="MainCourse_4_img"><span class="orange">Smoky</span><p>Veg Briyani</p><div class="ratings"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>(500)</div></div><div class="price-tag"><p>$200</p><button onclick="AddToCart('● Veg Briyani')" class="BuyNow_But">Add +</button></div></div>
+
+        </div>
+
+        <h1>DESSERTS & DRINKS</h1>
+        <div class="food-menu">
+            <div class="foodmenu1" ><div onclick="Open_Menu_expanded_FoodCard(this)"><img src="cake.jpg" alt="" class="MainCourse_1_img"><span class="orange">Dual Flavour</span><p>Choco - Cheese Cake</p><div class="ratings"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>(120)</div></div><div class="price-tag"><p>$150</p><button onclick="AddToCart('● Choco - Cheese Cake')" class="BuyNow_But">Add +</button></div></div>
+            <div class="foodmenu1" ><div onclick="Open_Menu_expanded_FoodCard(this)"><img src="ice (2).jpg" alt="" class="MainCourse_2_img"><span class="orange">Multi - Flavour</span><p>Ice - Cream Bowl</p><div class="ratings"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>(50)</div></div><div class="price-tag"><p>$200</p><button onclick="AddToCart('● Ice - Cream Bowl')" class="BuyNow_But">Add +</button></div></div>
+            <div class="foodmenu1" ><div onclick="Open_Menu_expanded_FoodCard(this)"><img src="OrangeJuice.jpg" alt="" class="MainCourse_3_img"><span class="orange">Refreshing</span><p>Orange Juice</p><div class="ratings"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>(500)</div></div><div class="price-tag"><p>$80</p><button onclick="AddToCart('● Orange Juice')" class="BuyNow_But">Add +</button></div></div>
+            <div class="foodmenu1" ><div onclick="Open_Menu_expanded_FoodCard(this)"><img src="smothe.jpg" alt="" class="MainCourse_3_img"><span class="orange">Fresh</span><p>Blueberry Shake</p><div class="ratings"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>(500)</div></div><div class="price-tag"><p>$130</p><button onclick="AddToCart('● Blueberry Shake')" class="BuyNow_But">Add +</button></div></div>
+
+        </div>
+
+
+        <div class="Menu_ExpandedFoodCard_Background">
+            <div class="Menu_Expanded_FoodCard">
+                <i class="fa-solid fa-heart" id="Cross_Expanded_Menu_FoodCard"></i>
+                <div class="expanded_Menu_image_div"></div>
+                <div class="Menu_expanded_Content">
+                    <p class="Menu_expanded_Food_Ethnicity"></p>
+                    <p class="Menu_expanded_Food_Name"></p>
+                    
+                    <div class="Menu_expanded_rating_vegan_div">
+                        <div class="Menu_expanded_rating"></div>
+                        <div class="Menu_expanded_veganTag"></div>
+                    </div>
+                    <p class="Menu_expanded_foods_description"></p>
+                    <div class="Menu_expanded_foods_nutrition_price_tag">
+                        <p class="Menu_expanded_foods_nutrition_info"></p>
+                        <p class="Menu_expanded_foods_price_info"></p>
+                    </div>
+                    <div class="Menu_expanded_foodCard_buttons_div">
+                        <a onclick="Close_Menu_expanded_FoodCard()"><button class="Menu_expanded_Back_button"> < Back</button></a>
+                        <a><button class="Menu_expanded_AddToCart_button">Add to Cart &nbsp;<i class="fa-solid fa-cart-shopping" id="home2_expanded_Cart_logo"></i></button></a>
+                    </div>
+                </div>
+                <div class="Menu_ExpandedCard_notification">Item Added to Cart!!!</div>
+            </div>
+        </div>
+       
+    </section>
+
+    <div class="food_card_background">
+        <div class="food_large_card">
+
+        </div>
+    </div>
+
+    <section class="offers" id="offers">
+        <h1>LIMITED TIME OFFERS</h1>
+        <div class="offers-main">
+            <div class="offers-1"><img src="offer1.jpg" alt=""></div>
+            <div class="offers-sub">
+                <div class="offers-2"><img src="ooffeerr.jpeg" alt=""></div>
+                <div class="offers-3"><img src="ooffeerrss.webp" alt=""></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews" id="reviews">
+        <h1>REVIEWS</h1>
+        <div class="reviews_TotalDiv">
+            <div class="review1">
+               <div class="img_name_div_review1">
+                    <img src="profile_review_img1.jpg" alt="">
+                    <div class="review1_namestar_div">
+                        <h1 class="review1_name">Irfan Views</h1>
+                        <p class="review_ratings">⭐⭐⭐⭐⭐</p>
+                    </div>
+               </div>
+               <p class="review1_text">Delicious food and easy-to-use website. Ordering was smooth, and the portions were generous. Will definitely order again. Five stars!</p>
+            </div>
+            <div class="review2">
+               <div class="img_name_div_review2">
+                    <div class="User_logo_review">F</div>
+                    <div class="review2_namestar_div">
+                        <h1 class="review2_name">FoodDash Lover</h1>
+                        <p class="review2_ratings">⭐⭐⭐⭐⭐</p>
+                    </div>
+               </div>
+               <p class="review2_text">I love the food here. I've been Ordering From this website for a while, and i need to say this the food here is awesome. the website is clean and user friendly. Cudoos to rexronald.</p>
+               <!--Forget about the food im here to talk about this website. Man damnn how can someone built a beautiful website like this, When i came here i forgot about my hunger all i was seeing is the beauty of this website.-->
+            </div>
+            <div class="review3">
+               <div class="img_name_div_review3">
+                    <img src="review_profile_img2new.jpg" alt="">
+                    <div class="review3_namestar_div">
+                        <h1 class="">Foodie</h1>
+                        <p class="review_ratings">⭐⭐⭐⭐⭐</p>
+                    </div>
+                    
+               </div>
+               <p class="review3_text">Absolutely loved the food! Everything was fresh, flavorful, and delivered on time. Great service and excellent quality. Highly recommend!</p>
+            </div>
+        </div>
+    </section>
+    <div class="GiveUsReviewBackground">
+        <div class="GiveUsReviewCard">
+            <h2>Give us your Review</h2>
+            <div class="GiveUsReview_nameDiv">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" placeholder="Your Name" class="Reviewer_name">
+            </div>
+            <div class="GiveUsReview_starRatings">
+                <div class="star1_review" onclick="star1_reviewFUN()">1 ⭐</div>
+                <div class="star2_review" onclick="star2_reviewFUN()">2 ⭐</div>
+                <div class="star3_review" onclick="star3_reviewFUN()">3 ⭐</div>
+                <div class="star4_review" onclick="star4_reviewFUN()">4 ⭐</div>
+                <div class="star5_review" onclick="star5_reviewFUN()">5 ⭐</div>
+            </div>
+            <textarea name="" id="" class="Review_of_user" placeholder="Type your Review here..."></textarea>
+            <div class="GiveUsReview_Submitbutton">
+                <button class="Close_giveUsReview" onclick="ClosereviewForm()">Close</button>
+                <button class="Submit_giveUsReview" onclick="SubmitreviewForm()">Submit</button>
+            </div>
+            <div class="GiveUsReview_Notification"></div>
+        </div>
+    </div>
+
+
+
+    <section class="footer" id="footer">
+        <div><p class="span"><span class="orange">Food</span>Dash<span class="orange">.</span></p><br>Food Dash &#169 2025 All Rights Reserved <br>By - REX RONALD<br><br><span class="orange">FOLLOW ME ON</span>
+            <div class="footer-contact-apps">
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-square-github"></i>
+                <i class="fa-solid fa-circle-user"></i>
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+        </div>
+        <div class="footer_taskbar_div"><span>Taskbar</span><br><br><p><a href="#home">Home </a><br><br><a href="#special">Today's Special</a> <br><br><a href="#menu">Menu</a> <br><br><a href="#offers">offers</a></p></div>
+        <div class="footer_info_div"><span>Information</span><br><br><p><a onclick="Open_RefundPolicy()">Refund Policy </a><br><br><a onclick="OpenreviewForm()">Give us a Review</a> <br><br><a class="Locate_Us" onclick="Open_location()">Locate Us</a> <br><br><a onclick="Open_PrivacyPolicy()">Privacy Policy</a></p></div>
+        <div class="footer_contact_div"><span>Contact</span><br><br><p><a href="#home">About me</a><br><br><a onclick="OpenComplaintForm()">Raise an Complaint</a><br><br>rexronald003@gmail.com <br><br>Okkiyampet - 600047</p></div>
+    </section>
+
+    <div class="Complaint_background">
+        <div class="Complaint_card">
+            <h2>Raise an Complaint</h2>
+            <input type="file" onchange="GetComplaintImage(this)" class="Complaint_Image_Input" accept="image/*">
+            <p>*Choose an image of the  food you ordered that you want to raise complaint about</p>
+            <div class="Complaint_Image_div">
+                <img src="" alt="" class="Complaint_Image">
+                <span onclick="Remove_Complaint_Image_func()" class="Remove_Complaint_Image" title="Remove Image">x</span>
+            </div>
+            <textarea name="" id="" class="Complaint_input" placeholder="Explain about your complaint in detail."></textarea>
+            <p class="Complaint_contact_info">we'll reach you through <span class="Complaint_contact_info_Email"> f</span></p>
+            <div class="Complaints_buttonsDiv">
+                <button class="Complaints_Cancel_buttons" onclick="Cancel_Complaint()">Cancel</button>
+                <button class="Complaints_Submit_buttons" onclick="Accept_Complaint()">Submit</button>
+            </div>
+            
+            <div class="Complaint_notification"></div>
+        </div>
+    </div>
+
+
+    
+
+
+
+    <div class="login_background">
+    <!--REGISTER FORM-->
+        <div class="register_form">
+            <i onclick=CloseRegisterForm(event) class="fa-solid fa-xmark" id="Cross_Register_Form" title="Close"></i>
+            <p class="Company_name"><u><span class="orange">Food</span><span class="dash">Dash</span><span class="orange">.</span></u></p>
+
+            <h4>Sign Up</h4>
+            <form action="" >
+                <div class="all_input_div">
+                    <div class="input_name_div">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" id="register_name_input" placeholder="Enter Your Full Name" required>
+                    </div>
+                    <div class="input_email_div">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" id="register_email_input" placeholder="Enter Your Valid Email" required>
+                    </div>
+                    <div class="input_password_div">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="register_password_input" placeholder="Enter Your Password" title="Enter Password of MIN.3 - MAX.8 Characters" required>
+                    </div>
+                    
+                </div>
+                <div class="register_page_text_div">
+                    <span><input type="checkbox">Remember Me</span>
+                    <span><input type="checkbox" class="privacyPolicy_Checkbox"><a class="Privacy_Policy" onclick="Open_PrivacyPolicy()">Privacy Policy</a></span>
+                </div>
+        
+                <p class="register_checker"></p>
+                <center><p class="transfer">Have an Account? <a  class="login_link" title="Login" onclick=NavToLoginForm()>Login</a></p></center>
+                <div class="register_button_div">
+                    <button class="register_submit_button" type="submit" onclick=RegisterSubmit(event)>Sign Up</button>
+                </div>
+            </form>
+        </div>
+<!--LOGIN FORM-->
+        <div class="login_form">
+            <i onclick=CloseLoginForm(event) class="fa-solid fa-xmark" id="Cross_Login_Form" title="Close"></i>
+            <p class="Company_name"><u><span class="orange">Food</span><span class="dash">Dash</span><span class="orange">.</span></u></p>
+
+            <h4>Login In</h4>
+            <form action="" >
+                <div class="all_input_div">
+                    <div class="input_name_div">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" id="login_name_input" placeholder="Enter Your Full Name" required>
+                    </div>
+                    <div class="input_email_div">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" id="login_email_input" placeholder="Enter Your Registered Email" required>
+                    </div>
+                    <div class="input_password_div">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="login_password_input" placeholder="Enter Your Password" title="Enter Password of MIN.3 - MAX.8 Characters" required>
+                    </div>
+
+                </div>
+                <div class="login_page_text_div">
+                    <span><input type="checkbox">Remember Me</span>
+                    <a class="Forgot_password" onclick="Open_ForgotPassword()">forgot Password?</a>
+                </div>
+        
+                <p class="Login_checker"></p>
+                <center><p class="transfer">New? <a  class="register_link" title="Register" onclick=NavToRegisterForm()>Register Now</a></p></center>
+                <div class="Login_button_div">
+                    <button class="login_submit_button" type="submit" onclick=LoginSubmit(event) >Log in</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <div class="location_background"> 
+        <div class="locate_us_div">
+            <i class="fa-solid fa-xmark" id="Cross_locate_us" onclick="Close_location()" title="Close"></i>
+            <h2 class="Location_tittle">Our Shop's Location</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.7251861530954!2d80.2294864101005!3d12.925376287333114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d3b27df8ee9%3A0xddeb87479aab4b5d!2sDon%20Bosco%20Migrant%20Resource%20Centre!5e0!3m2!1sen!2sin!4v1750149498670!5m2!1sen!2sin"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+        </div>
+        </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
