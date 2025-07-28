@@ -1,0 +1,5940 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+:root{
+    --orange-colour:rgb(255, 109, 4);
+    --dark-orange-colour:rgb(160, 67, 0);
+    --light-orange-colour:rgb(251, 154, 85);
+}
+body{
+    overflow-x: hidden;
+}
+
+li{
+    list-style: none;
+}
+.login_background{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display:none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    z-index: 9999;
+    background-color: rgba(255, 255, 255, 0.293);
+    backdrop-filter: blur(20px);
+}
+.privacyPolicy_background{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display:none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    z-index: 99999;
+    background-color: rgba(255, 255, 255, 0.293);
+    backdrop-filter: blur(1px);
+}
+.location_background{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display:none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    z-index: 9999;
+    background-color: rgba(255, 255, 255, 0.293);
+    backdrop-filter: blur(20px);
+}
+.home2food_card_background{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display:none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    z-index: 9999;
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(5px);
+}
+.Menu_ExpandedFoodCard_Background{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display:none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    z-index: 9999;
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(5px);
+}
+.Final_cart_background{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display:none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    z-index: 9999;
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(5px);
+    
+}
+.Complaint_background{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display:none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    z-index: 9999;
+    background-color: rgba(255, 255, 255, 0.293);
+    backdrop-filter: blur(20px);
+}
+.GiveUsReviewBackground{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display:none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    z-index: 9999;
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(5px);
+}
+.favourites_background{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display:none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    z-index: 9999;
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(5px);
+}
+.favorites_card{
+    margin: 40px;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    padding: 30px 30px 40px 30px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 350px;
+    height: 300px;
+    background-color: antiquewhite;
+    box-shadow: 0px 0px 20px gray;
+}
+.favorites_text{
+    color: var(--orange-colour);
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 20px;
+}
+#favourite-xmark{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+}
+.Favourites_UL_List{
+    width: 100%;
+    height: 80%;
+    overflow-y: auto;
+}
+.Favourites_UL_List li{
+    margin-bottom: 10px;
+}
+.register_form u,.login_form u,.forgotPasswordText_input_div u{
+    text-decoration: underline;
+    text-decoration-style:dashed;
+    text-decoration-color: var(--orange-colour);
+}
+.Company_name{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;  
+    margin-bottom: 10px;
+}
+.orange{
+    color: var(--orange-colour);
+}
+.register_form{
+    padding: 40px 20px 40px 20px;
+    background-color: #ffffff;
+    position: relative;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 25px;
+    box-shadow: 20px 20px 20px rgb(107, 107, 107);
+}
+.privacyPolicy_display{
+    padding: 20px;
+    background-color: #ffffff;
+    position: relative;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 25px;
+    box-shadow: 20px 20px 20px rgb(107, 107, 107);
+}
+.privacyPolicy_text{
+    border: 1px solid grey;
+    font-size: 14px;
+    border-radius: 10px;
+    margin-top: 10px;
+    overflow-y: auto;
+    text-align: justify;
+    width: 250px;
+    height: 150px;
+    padding: 10px;
+}
+.privacyPolicy_heading{
+    text-align: center;
+    font-weight: bold;
+
+}
+.privacyPolicy_button_div{
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.privacyPolicy_Acceptbutton,.forgotPassword_SendMailbutton{
+    padding: 2px 8px;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}
+.privacyPolicy_Closebutton,.forgotPassword_Closebutton{
+    padding: 2px 8px;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+
+}
+.forgotPassword_display{
+    padding: 30px 30px;
+    background-color: #ffffff;
+    position: relative;
+    
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 25px;
+    box-shadow: 20px 20px 20px rgb(107, 107, 107);
+}
+.ForgotPassword_Notification{
+    position: absolute;
+    display: none;
+    align-items: center;
+    top: -55px;
+    right: 50%;
+    width: 300px;
+    transform: translate(50%,50%);
+    background-color: green;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    justify-content: center;
+    
+    padding: 10px 20px;
+    border-radius:30px;
+}
+#ForgotPassword_email_input{
+    border: 0px;
+    outline: none;
+    padding: 0px 0px 0px 8px;
+    font-weight: bold;
+    font-size: 16px;
+}
+.forgotPasswordText{
+    margin-top: 20px;
+    margin-bottom: 15px;
+    width: 250px;
+    
+}
+#ForgotPassword_email_input::placeholder{
+    font-weight: 400;
+}
+.forgotPassword_button_div{
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.login_form{
+    padding: 40px 20px 40px 20px;
+    background-color: #ffffff;
+    position: relative;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 25px;
+    box-shadow: 20px 20px 20px rgb(107, 107, 107);
+    /*box-shadow: 0 0 60px rgba(26, 25, 25, 0.607);*/
+    
+}
+#Cross_Register_Form,#Cross_Login_Form{
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 25px;
+    color: rgb(67, 67, 67);
+}
+.all_input_div{
+    margin-top: 20px;
+}
+.input_name_div,.input_email_div,.input_password_div{
+    width: 100%; 
+    
+    border-radius: 15px;
+    padding: 6px 9px 6px 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    box-shadow:inset 5px 5px 2px #c3c3c3,inset -5px -5px 2px #ffffffff;
+}
+.input_name_div i,.input_email_div i,.input_password_div i{
+    color: rgb(255, 111, 0);
+}
+.login_form input,.register_form input{
+    border: none;
+    background-color: none;
+    background: none;
+    font-weight: 600;
+    outline: none;
+    
+    font-size: 15px;
+    padding: 6px 15px 6px 12px;
+    font-family:Poppins;
+}
+.login_form input::placeholder,.register_form input::placeholder{
+    font-family: "Poppins";
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.login_page_text_div,.register_page_text_div{
+    padding: 10px 10px 10px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.login_page_text_div span,.register_page_text_div span{
+    font-size: 12px;
+} 
+.Privacy_Policy{
+    text-decoration: underline; 
+}
+.Forgot_password{
+    font-size: 12px;
+    text-decoration: underline;
+}
+.transfer{
+    margin-top: 10px;
+    font-size: 12px;
+}
+.register_checker,.Login_checker{
+    color: rgb(255, 0, 0);
+    padding-bottom: 10px;
+    padding-left: 10px;
+    display: none;
+    font-size: 12px;
+}
+
+
+.Login_button_div,.register_button_div{
+    display: flex;
+    margin-top: 15px;
+    gap: 50px;
+    justify-content: center;
+}
+.register_link,.login_link{
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.login_submit_button,.register_submit_button{
+    color: white;
+    width: 180px;
+    background-color: var(--orange-colour);
+    cursor: pointer;
+    font-size: 16px;
+    padding: 8px 5px;
+    font-weight: bold;
+    border: 2px solid transparent;
+    border-radius: 15px;
+}
+
+.Profile_Logo{
+    cursor: pointer;
+    
+}
+
+.profile_dropdown_div{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 250px;
+    cursor: default;
+    z-index: 999;
+    border: 2px solid var(--orange-colour);
+    border-radius: 15px;
+    background-color: rgba(252, 252, 252, 0.963);
+    backdrop-filter: blur(5px);
+}
+.drop_down_profile_background{
+    height: 100px;
+    width: 100%;
+    position: relative;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border: 2px solid var(--orange-colour);
+    background-color: var(--orange-colour);
+}
+#fa-xmarks{
+    position: absolute; 
+    color: white;
+    top: 8px;
+    right: 8px;
+    font-size: 24px;
+}
+.profile_divs{
+    background-color: white;
+    padding: 32px 32px;
+    color: blue;
+    position: absolute;
+    right: 50%;
+    bottom: 0;
+    transform: translate(50%,50%);
+    font-weight: bold;
+    width: 50px;
+    height: 50px; 
+    font-size: 40px;
+    display: flex;
+    line-height: 0;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid var(--orange-colour);
+    border-radius: 20%;
+}
+.profile_info{
+    padding: 50px 10px 10px 10px; 
+}
+.profile_info td{
+    font-size: 12px;
+}
+.logout_button{
+    margin: 20px 0px;
+    width: 150px;
+    background-color: var(--orange-colour);
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 12px;
+    padding: 10px 0px;
+    border-radius: 10px;
+    cursor:pointer;
+}
+.LargeProfile_Fav_Button{
+    margin: 20px 0px;
+    width: 150px;
+    background-color: var(--orange-colour);
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 12px;
+    padding: 10px 0px;
+    border-radius: 10px;
+    cursor:pointer;
+}
+.logout_button i{
+    font-size: 16px;
+}
+.LargeProfile_Fav_Button i{
+    font-size: 18px;
+}
+.logout_text{
+    font-size: 28px;
+}
+#home2_order_button{
+    cursor: pointer;
+    font-style: italic;
+}
+.menu>h1,.offers>h1{
+    font-style: italic;
+}
+.footer div a{
+    cursor: pointer;
+}
+.Locate_Us{
+    cursor: pointer;
+}
+.locate_us_div{
+    background-color:antiquewhite;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 20px 20px 20px rgb(154, 154, 154);
+}
+#Cross_locate_us{
+    position: absolute;
+    font-size: 30px;
+    top: 18px;
+    right: 18px;
+    color: rgb(54, 54, 54);
+}
+.Location_tittle{
+    color: var(--orange-colour);
+    font-weight: bold;
+    font-size: 24px;
+    font-style: italic;
+    text-align: center;
+}
+
+
+@media(min-width:1200px) and (max-width:2000px){
+.home{
+    background-color: antiquewhite;
+    padding: 0px 0px;
+    position: relative;
+}
+a{
+    text-decoration: none;
+    color: black;
+    
+}
+
+.navBar{
+    display: flex;
+    position: fixed;
+    padding: 20px 60px 10px 60px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.464);
+    backdrop-filter: blur(40px);
+    border-bottom: 1px solid rgb(203, 203, 203);
+    box-shadow:0 0 10px rgb(136, 136, 136) ; 
+    z-index: 1;
+    align-items: center;
+    justify-content: space-between;
+}
+.navBar u{
+    text-decoration: underline;
+    text-decoration-style:dashed;
+    text-decoration-color: var(--orange-colour);
+}
+.navBar p{
+    font-size: x-large;
+    font-weight: bold;  
+}
+.orange{
+    color: var(--orange-colour);
+}
+.navBar ul{
+    list-style: none;
+    display: flex;
+    gap: clamp(3rem,8vw,10rem);
+}
+.navBar li{
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+.navBar>div{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.fa-magnifying-glass{
+    font-size: 20px;
+    color: var(--orange-colour);
+    
+}
+.fa-arrow-right-to-bracket{
+    font-size: 22px;
+    padding: 4px 4px;
+    border-radius: 50%;
+    color: var(--orange-colour);
+}
+#nav_cart_logo{
+    font-size: 20px;
+    color: var(--orange-colour);
+    position: relative;
+    cursor: pointer;
+}
+.number_of_orders_display{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: blue;
+    height: 20px;
+    border: 1px solid transparent;
+    display: flex;
+    padding: 2px 4px;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 50%;
+}
+
+
+
+
+.Final_cart_Card{
+    width: 900px;
+    
+    border-radius: 30px;
+    border: 2px solid transparent;
+    box-shadow: 0px 0px 20px gray;
+    background-color: antiquewhite;
+    display: none;
+    flex-direction: column;
+    position: relative;
+    padding: 30px 100px;
+    
+}
+#Cross_final_card{
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 26px;
+}
+.final_card_heading{
+    text-align: center;
+    font-size: 28px;
+    color: var(--orange-colour);
+    font-weight: bold;
+}
+.YourCartIsEmptyText_OR_TotalNoOfItems{
+    margin-top: 10px;
+    text-align: right;
+    color: rgb(99, 99, 99);
+    font-size: 18px;
+
+}
+.Added_items{
+    overflow-y: auto;
+    height: 200px;
+    margin-top: 20px;
+    list-style-type:circle;
+}
+.Added_items div{
+    font-size: 18px;
+    list-style-type:circle;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    height: 50px;
+
+}
+.Cart_Item_Remove_button{
+    padding: 5px;
+    height: 25px;
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+    color: red;
+    justify-content: center;
+    border: 2px solid transparent;
+    background-color: white;
+    margin-left: 20px;
+    font-weight: bold;
+    border-radius: 25px;
+    
+}
+.final_card_bottom_div{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    
+    padding-top: 30px;
+    justify-content: space-between;
+}
+.final_card_coupon_div{
+    border: 2px solid var(--orange-colour);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    width: 215px;
+    height: 35px;
+    position: relative;
+    background-color: white;
+    padding: 3px 5px 3px 8px;
+}
+#final_card_discount_tags{
+    color: var(--orange-colour);
+}
+.final_card_coupon_input{
+    padding: 2px 4px 2px 12px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    font-size: 16px;
+    width:166px ;
+}
+.final_card_coupon_input::placeholder{
+    color: #969696;
+    font-weight: 100;
+}
+.final_card_discount_EnterIcon_div{
+    background-color: var(--orange-colour);
+    height: 35px;
+    width: 40px;
+    display: flex;
+    position: absolute;
+    right: 0px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 13px;
+    border-top-left-radius: 0px;
+    border-top-right-radius:13px ;
+    border: 2px solid var(--orange-colour);
+    cursor: pointer;
+}
+.final_card_button_price_div{
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+    flex-direction: row;
+
+}
+.final_card_priceAndDetails_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.final_card_priceOnly_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 20px;
+    column-gap: 10px;
+
+    font-weight: bold;
+}
+.final_card_slashed_price{
+    text-decoration: line-through;
+    color: red;
+    text-decoration-color: blue;
+}
+.final_card_actual_price{
+    color: green;
+}
+.final_card_details_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    position: relative;
+    text-decoration: underline;
+    text-decoration-color: blue;
+    color: blue;
+    cursor: pointer;
+}
+.Detailstext_Icon_div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+.Expanded_FinalCartDetails{
+    position: absolute;
+    background-color: rgba(255, 255, 255);
+    backdrop-filter: blur(240px);
+    cursor: default;
+    width: 250px;
+    bottom: -25px;
+    display: none;
+    right: -25px;
+    border-radius: 30px;
+    border: 2px solid blue; 
+    padding: 40px 20px 20px 20px;
+}
+#Cross_final_card_details{
+    position: absolute;
+    right: 15px;
+    color: black;
+    top: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.Expanded_FinalCartDetails div{
+    display: flex;
+    width: 180px;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 6px;
+    margin-top: 4px;
+    justify-content: space-between;
+}
+.Discount_RemoveButton{
+    font-size: 10px;
+    background-color: red;
+    border: 1px solid red;
+    color: white;
+    cursor: pointer;
+    display: none;
+    
+    padding: 0px 5px;
+    border-radius: 25px;
+}
+.final_card_placeOrder_button{
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    background-color: var(--orange-colour);
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px solid transparent;
+    border-radius: 20px;
+}
+.HomeScreen_viewCart{
+    position: fixed;
+    top: 85%;
+    left: 50%;
+    z-index: 999;
+    height: 50px;
+    border: 2px solid transparent;
+    width: 150px;
+    transform: translate(-50%,50%);
+    display: none;
+    z-index: 1000000000;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 30px;
+    background-color: rgb(2, 188, 52);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.AddToCart_Notification{
+    position: absolute;
+    display: none;
+    align-items: center;
+    bottom: -35px;
+    right: 15px;
+    z-index: 1000;
+    background-color: green;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    justify-content: center;
+    height: 30px;
+    width: 150px;
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+    border-top-left-radius: 80px; 
+}
+.home2_ExpandedCard_notification{
+    position: absolute;
+    display: none;
+    align-items: center;
+    top: -65px;
+    right: 50%;
+    transform: translate(50%,50%);
+    background-color: green;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 2px 20px;
+    justify-content: center;
+    height: 30px;
+    border-radius:30px;
+}
+.Menu_ExpandedCard_notification{
+    position: absolute;
+    display: none;
+    align-items: center;
+    top: -65px;
+    right: 50%;
+    transform: translate(50%,50%);
+    background-color: green;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 2px 20px;
+    justify-content: center;
+    height: 30px;
+    border-radius:30px;
+}
+.FinalCard_Expanded_notification.green{
+    background-color: green;
+    display: none;
+    position: absolute;
+    top: -70px;
+    right: 50%;
+    transform: translate(50%,50%);
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 7px 18px;
+    border-radius: 30px;
+}
+.FinalCard_Expanded_notification.red{
+    background-color: red;
+    display: none;
+    position: absolute;
+    top: -70px;
+    right: 50%;
+    transform: translate(50%,50%);
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 7px 18px;
+    border-radius: 30px;
+}
+
+
+
+
+.Profile_Logo{
+    display: none;
+    position: relative;
+}
+.profile_div{
+    background-color: white;
+    padding: 12px 12px;
+    color: blue;
+    font-weight: bold;
+    font-family: Poppins;
+    width: 25px;
+    height: 25px; 
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--orange-colour);
+    border-radius: 50%;
+}
+.fa-bars{
+    font-size: 24px;
+    display: none;
+}
+.dropdown-icon-div{
+    display: none;
+}
+.homeContentDiv{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 130px 80px 150px 80px;
+    padding-top: 130px;
+    padding-bottom: 150px;
+    gap: clamp(2rem,1.5vw,4rem);
+    
+}
+.homeContent{
+    font-size: 55px;
+    font-weight: bold;
+}
+.home>div{
+    
+    display: flex;
+    align-items: center;
+}
+.home>div span{
+    color: var(--orange-colour);
+
+}
+.home>div button{
+    font-size: 20px;
+    width: 300px;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    border: 3px solid var(--orange-colour);
+}
+.OrderNow{
+    color: aliceblue;
+    background-color: var(--orange-colour);
+}
+.trackOrder{
+    color: var(--orange-colour);
+    background-color: transparent;
+}
+.homepic img{
+    border-radius: 50%;
+    height: 480px;
+    border: 5px solid var(--orange-colour);
+    border-style: dashed;
+    padding: 7px;
+    
+}
+.home-end{
+    
+    width: 80%;
+    background-color: white;
+    position: absolute;
+    bottom: -60px;
+    left: 10%;
+    padding: 20px 20px 20px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border-radius: 14px;
+    box-shadow: 0 0 10px rgb(132, 131, 131);
+}
+.home-end>div{
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    width: 33.9%;
+    justify-content:center;
+}
+.home-end>div div{
+    width: 50%;
+    
+}
+.home-end img{
+    height: 80px;
+}
+.fast-del-content{
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.home2{
+    margin-top: 50px;
+}
+.home2-tittle{
+   
+    padding: 0px 100px;
+    margin-top: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+
+}
+.home2-topic{
+    font-size: 40px;
+    font-weight: bold;
+}
+.home2-foods{
+    padding-top: 80px;
+    padding-left: 70px;
+    padding-right: 70px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 60px;
+    column-gap: 50px;
+    align-items: center;
+    justify-content: space-around;
+}
+.home2-foods>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    cursor: default;
+}
+
+
+
+.home2_expanded_Card{
+    
+    width: 1000px;
+    display: flex;
+    position: relative;
+    padding: 50px 80px 50px 80px;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    background-color: antiquewhite;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgb(100, 99, 99);
+}
+#Cross_Expanded_home2_FoodCard{
+    position: absolute;
+    font-size: 30px;
+    top: 15px;
+    right: 15px;
+    color: rgb(39, 39, 39);
+}
+.expanded_home2_image_div{
+    width: 50%;
+   
+}
+.expanded_home2_image_div img{
+    height: 350px;
+    border-radius: 50%;
+    padding: 8px;
+    border: 5px dashed var(--orange-colour);
+}
+.home2_expanded_Content{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.home2_expanded_Food_Name{
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--orange-colour);
+    text-align: center;
+    text-shadow: 0px 0px 9px white;
+}
+.home2_expanded_rating_vegan_div{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    font-size: 15px;
+    justify-content: space-between;
+    align-items: center;
+}
+.expanded_veganTag.red{
+    color: red;
+}
+.expanded_veganTag.green{
+    color: green;
+}
+.home2_expanded_foods_description{
+    margin-top: 20px;
+    text-align: justify;
+}
+.home2_expanded_foods_nutrition_price_tag{
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.home2_expanded_foods_nutrition_info{
+    display: flex;
+    font-size: 14px;
+}
+.home2_expanded_foods_price_info{
+    font-weight: bold;
+}
+.home2_expanded_foodCard_buttons_div{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.home2_expanded_Back_button,.home2_expanded_AddToCart_button{
+    padding: 10px 15px 12px 12px;
+    border: 3px solid transparent;
+    border-radius: 15px;
+    background-color: var(--orange-colour);
+    color: #ffffff;
+    font-weight: bold;
+}
+#home2_expanded_Cart_logo{
+    color: white;
+}
+
+
+
+
+
+
+
+.home2-foods img{
+    height: 200px;
+    border-radius: 50%;
+    border: 4px dashed var(--orange-colour);
+    padding: 8px;
+    transition: transform 0.4s ease;
+    margin-bottom: 15px;
+}
+marquee{
+    margin-top: 40px;
+    padding: 10px 0px;
+    background-color:antiquewhite;
+    font-size: 20px;
+    font-weight: bold;
+}
+.menu-topic{
+    margin-top: 40px;
+    padding: 0px 100px 0px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.menu-tittle{
+    font-size: 40px;
+    font-weight: bold;
+}
+.menu_topic_button{
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 2px solid var(--orange-colour) ;
+    background-color: var(--orange-colour);
+    color: aliceblue;
+    font-weight: bold;
+}
+.food-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 90px;
+    flex-wrap: wrap;
+    column-gap: 70px;
+    row-gap: 130px;
+    padding: 0px 70px 0px 70px;
+}
+.menu>h1{
+    margin-top:50px;
+    text-align: center;
+    color: var(--orange-colour);
+}
+.food-menu img{
+    height: 180px;
+    border-radius: 50%;
+    border: 4px dashed var(--orange-colour);
+    padding: 8px;
+    position: absolute;
+    transition: transform 0.4s ease;
+
+    right: -50px;
+    top:-80px;
+    
+    
+}
+.foodmenu1{
+    border-radius: 15px;
+    padding: 100px 20px 20px 20px;
+    position: relative;
+    background-color: antiquewhite;
+    cursor: default;
+    
+    
+}
+.foodmenu1 span{
+    font-size: large;
+    font-weight: bold;
+}
+.foodmenu1 div>p{
+    font-size: large;
+    font-weight: bold;
+}
+.price-tag{
+    width: 100%;
+    gap: 20px;
+    margin-top: 20px;  
+}
+.food-menu button{
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: 2px solid var(--orange-colour) ;
+    background-color: var(--orange-colour);
+    color: aliceblue;
+    font-weight: bold;
+}
+.price-tag{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: bold;
+}
+.ratings{
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    
+}
+.ratings i{
+    color: rgb(222, 190, 6);
+}
+
+
+
+
+
+
+
+.Menu_Expanded_FoodCard{
+    width: 1000px;
+    padding: 50px 80px;
+    background-color: antiquewhite;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px grey;
+    display: none;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 50px;
+
+}
+#Cross_Expanded_Menu_FoodCard{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 28px;
+}
+.expanded_Menu_image_div img{
+    height: 350px;    
+    border-radius: 50%;
+    padding: 8px;
+    border: 5px dashed var(--orange-colour);
+}
+.Menu_expanded_Content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.Menu_expanded_Food_Ethnicity{
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--orange-colour);
+    text-align: center;
+    text-shadow: 0px 0px 9px white;
+}
+.Menu_expanded_Food_Name{
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--orange-colour);
+    text-align: center;
+    text-shadow: 0px 0px 9px white;
+}
+.Menu_expanded_rating_vegan_div{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    font-size: 15px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Menu_expanded_veganTag.red{
+    color: red;
+}
+.Menu_expanded_veganTag.green{
+    color: green;
+}
+.Menu_expanded_foods_description{
+    margin-top: 20px;
+    text-align: justify;
+}
+.Menu_expanded_foods_nutrition_price_tag{
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.Menu_expanded_foods_nutrition_info{
+    font-size: 15px;
+}
+.Menu_expanded_foods_price_info{
+    font-weight: bold;
+}
+.Menu_expanded_foodCard_buttons_div{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Menu_expanded_Back_button,.Menu_expanded_AddToCart_button{
+    padding: 10px 15px 12px 12px;
+    border: 3px solid transparent;
+    border-radius: 15px;
+    background-color: var(--orange-colour);
+    color: #ffffff;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+.offers{
+    margin-top: 100px;
+    
+}
+.offers>h1{
+    color: var(--orange-colour);
+    text-align: center;
+}
+.offers-main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 30px;
+    justify-content: center;
+    gap: 20px;
+}
+.offers-1>img{
+    height: 424px;
+    border-radius: 15px;
+}
+.offers-sub{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.offers-2 img{
+    height: 199px;
+    width: 600px;
+    border-radius: 15px;
+}
+.offers-3 img{
+    height: 199px;
+    width: 600px;
+    border-radius: 15px;
+}
+
+
+.reviews{
+    margin-top: 90px;
+}
+.reviews>h1{
+    color:var(--orange-colour);
+    font-style: italic;
+    text-align: center;
+
+}
+.reviews_TotalDiv{
+    width: 100%;
+    margin-top: 20px;
+    background-color: pink;
+    padding: 60px 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0px 0px 10px rgb(118, 118, 118);
+}
+.review1,.review3{
+    height: 300px;
+    width: 300px;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    background-color: white;
+    padding: 40px 40px;
+    box-shadow: 0px 0px 10px rgb(118, 118, 118);
+
+}
+.review2{
+    display: block;
+    height: 350px;
+    width: 350px;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    background-color: white;
+    padding: 40px 40px;
+    box-shadow: 0px 0px 10px rgb(118, 118, 118);
+
+}
+.reviews img{
+    border-radius: 50%;
+    border: 2px solid black;
+    width: 40px;
+}
+.User_logo_review{
+    border-radius: 50%;
+    background-color: skyblue;
+    border: 2px solid black;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+.img_name_div_review1,.img_name_div_review2,.img_name_div_review3{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 20px;
+}
+.review1_namestar_div,.review2_namestar_div,.review3_namestar_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.review_ratings{
+    text-align: start;
+    font-size: 14px;
+}
+.review2_ratings{
+    text-align: start;
+    font-size: 14px;
+}
+.review1_text,.review2_text,.review3_text{
+    margin-top: 25px;
+    text-align: justify;
+    text-indent: 40px; 
+}
+.GiveUsReviewCard{
+    display: none;
+    position: relative;
+    flex-direction: column;
+    background-color: antiquewhite;
+    border-radius: 25px;
+    padding: 40px;
+    box-shadow: 0 0 20px gray;
+}
+.GiveUsReviewCard h2{
+    color:var(--orange-colour);
+    text-align: center;
+}
+.GiveUsReview_nameDiv{
+    margin-top: 30px;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: inset 5px 5px 2px #c3c3c3,inset -5px -5px 2px #ffffffff;;
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+.GiveUsReview_nameDiv i{
+    margin-left: 5px;
+    color: var(--orange-colour);
+}
+.GiveUsReview_nameDiv>input{
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    padding-left: 5px;
+    font-size: 18px;
+}
+.GiveUsReview_nameDiv>input::placeholder{
+    color: rgb(164, 164, 164);
+    font-weight: 400;
+    font-size: 16px;
+}
+.GiveUsReview_starRatings{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+}
+.GiveUsReview_starRatings div{
+    border: 2px solid black;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.star2_review.selected,.star3_review.selected,.star4_review.selected{
+    border: 2px solid black;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+}
+.star1_review{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.star1_review.selected{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: black;
+    color: white;
+}
+.star5_review{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.star5_review.selected{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: black;
+    color: white;
+
+}
+.Review_of_user{
+    height: 150px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 25px;
+    padding: 10px;
+    resize: none;
+}
+.GiveUsReview_Submitbutton{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.Close_giveUsReview{
+    background-color: red;
+    padding: 4px 15px;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+.Submit_giveUsReview{
+    background-color: blue;
+    padding: 4px 15px;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+.GiveUsReview_Notification{
+    position: absolute;
+    top: -50px;
+    right: 50%;
+    width: 300px;
+    transform: translate(50%,50%);
+    display: none;
+    padding: 5px 15px;
+    text-align: center;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    border-radius: 25px;
+}
+
+
+
+
+
+
+
+
+.footer{
+    margin-top: 80px;
+    border-top: 4px dashed var(--orange-colour);
+    padding: 50px 60px 80px 60px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    column-gap: 35px;
+    align-items: center;
+    justify-content: space-around;
+    background-color: antiquewhite;
+}
+.span{
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+.footer span{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: var(--orange-colour);
+}
+.footer-contact-apps{
+    display: flex;
+    font-size: 26px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.locate_us_div iframe{
+    margin-top: 20px;
+    border-radius: 15px;
+    width: 600px;
+    height: 450px;
+}
+.Complaint_card{
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid red;
+    background-color: antiquewhite;
+    border-radius: 30px;
+    padding: 30px;
+    width: 350px;
+    box-shadow: 0px 0px 20px rgb(144, 144, 144);
+}
+.Complaint_card h2{
+    color: var(--orange-colour);
+}
+.Complaint_Image_Input{
+    margin-top: 20px;
+}
+.Complaint_card>p{
+    font-size: 12px;
+}
+.Complaint_Image_div{
+    margin-top: 10px;
+    position: relative;
+    display: none;
+}
+.Complaint_Image{
+    height: 80px;
+    border-radius: 20px;
+}
+.Remove_Complaint_Image{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 2px;
+    right: 2px;
+    line-height: 1;
+    height: 15px;
+    width: 15px;
+    font-weight: bold;
+    background-color: rgb(151, 151, 151);
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+.Complaint_input{
+    margin-top: 20px;
+    resize: none;
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+}
+.Complaints_buttonsDiv{
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.Complaints_Cancel_buttons{
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    padding: 5px 20px;
+    border: 2px solid transparent;
+    border-radius: 30px;
+}
+.Complaints_Submit_buttons{
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    padding: 5px 20px;
+    border: 2px solid transparent;
+    border-radius: 30px;
+}
+.Complaint_contact_info_Email,.Complaint_contact_info{
+    display: flex;
+    font-size: 12px;
+}
+.Complaint_contact_info_Email{
+    margin-left: 5px;
+}
+.Complaint_notification{
+    position: absolute;
+    top: -70px;
+    right: 50%;
+    transform: translate(50%,50%);
+    display: none;
+    text-align: center;
+    background-color: green;
+    color: white;
+    width: 350px;
+    font-weight: bold;
+    padding: 5px 20px;
+    border: 2px solid transparent;
+    border-radius: 30px;
+}
+}
+@media(min-width:769px) and (max-width:1199.9px){
+    .home{
+        background-color:antiquewhite;
+        padding: 0px 0px;
+        position: relative;
+        
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    
+    .navBar{
+        display: flex;
+        position: fixed;
+        padding: 20px 35px 10px 35px;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.459);
+        backdrop-filter: blur(40px);
+        border-bottom: 1px solid rgb(203, 203, 203);
+        box-shadow:0 0 10px rgb(152, 152, 152) ; 
+        z-index: 1;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .navBar u{
+        text-decoration: underline;
+        text-decoration-style:dashed;
+        text-decoration-color: var(--orange-colour);
+    }
+    .navBar p{
+        font-size: x-large;
+        font-weight: bold;  
+    }
+    .orange{
+        color: var(--orange-colour);
+    }
+    .navBar ul{
+        list-style: none;
+        display: flex;
+        gap: clamp(0.8rem,5vw,10rem);
+    }
+    .navBar li{
+        font-size: 15px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .navBar>div{
+        display: flex;
+        align-items: center;
+        gap: 25px;
+    }
+    .fa-arrow-right-to-bracket{
+        font-size: 20px;
+        padding: 4px 4px;
+        border-radius: 50%;
+        color: var(--orange-colour);
+    }
+    #nav_cart_logo{
+    font-size: 20px;
+    color: var(--orange-colour);
+    position: relative;
+    cursor: pointer;
+}
+.number_of_orders_display{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: blue;
+    height: 18px;
+    border: 1px solid transparent;
+    display: flex;
+    padding: 2px 4px;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+.Final_cart_Card{
+    width: 700px;
+    border-radius: 30px;
+    border: 2px solid transparent;
+    box-shadow: 0px 0px 20px gray;
+    background-color: antiquewhite;
+    display: none;
+    flex-direction: column;
+    position: relative;
+    padding: 20px 80px;
+    
+}
+#Cross_final_card{
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 26px;
+}
+.final_card_heading{
+    text-align: center;
+    font-size: 25px;
+    color: var(--orange-colour);
+    font-weight: bold;
+}
+.YourCartIsEmptyText_OR_TotalNoOfItems{
+    margin-top: 10px;
+    text-align: right;
+    color: rgb(99, 99, 99);
+    font-size: 16px;
+
+}
+.Added_items{
+    overflow-y: auto;
+    height: 200px;
+    margin-top: 20px;
+    list-style-type:circle;
+}
+.Added_items div{
+    font-size: 17px;
+    list-style-type:circle;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    height: 50px;
+
+}
+.Cart_Item_Remove_button{
+    padding: 3px;
+    height: 25px;
+    display: flex;
+    font-size: 12px;
+    align-items: center;
+    color: red;
+    justify-content: center;
+    border: 2px solid transparent;
+    background-color: white;
+    margin-left: 20px;
+    font-weight: bold;
+    border-radius: 25px;
+    
+}
+.final_card_bottom_div{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    
+    padding-top: 20px;
+    justify-content: space-between;
+}
+.final_card_coupon_div{
+    border: 2px solid var(--orange-colour);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    width: 215px;
+    height: 35px;
+    position: relative;
+    background-color: white;
+    padding: 3px 5px 3px 8px;
+}
+#final_card_discount_tags{
+    color: var(--orange-colour);
+}
+.final_card_coupon_input{
+    padding: 2px 4px 2px 12px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    font-size: 16px;
+    width:166px ;
+}
+.final_card_coupon_input::placeholder{
+    color: #969696;
+    font-weight: 100;
+}
+.final_card_discount_EnterIcon_div{
+    background-color: var(--orange-colour);
+    height: 35px;
+    width: 40px;
+    display: flex;
+    position: absolute;
+    right: 0px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 13px;
+    border-top-left-radius: 0px;
+    border-top-right-radius:13px ;
+    border: 2px solid var(--orange-colour);
+    cursor: pointer;
+}
+.final_card_button_price_div{
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+    flex-direction: row;
+
+}
+.final_card_priceAndDetails_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.final_card_priceOnly_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 18px;
+    column-gap: 6px;
+    font-weight: bold;
+}
+.final_card_slashed_price{
+    text-decoration: line-through;
+    color: red;
+    text-decoration-color: blue;
+}
+.final_card_actual_price{
+    color: green;
+}
+.final_card_details_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    position: relative;
+    text-decoration: underline;
+    text-decoration-color: blue;
+    color: blue;
+    cursor: pointer;
+}
+.Detailstext_Icon_div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+.Expanded_FinalCartDetails{
+    position: absolute;
+    background-color: rgba(255, 255, 255);
+    backdrop-filter: blur(240px);
+    cursor: default;
+    width: 250px;
+    bottom: -22px;
+    display: none;
+    right: -25px;
+    border-radius: 30px;
+    border: 2px solid blue; 
+    padding: 40px 20px 20px 20px;
+}
+#Cross_final_card_details{
+    position: absolute;
+    right: 15px;
+    color: black;
+    top: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.Expanded_FinalCartDetails div{
+    display: flex;
+    width: 180px;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 6px;
+    margin-top: 4px;
+    justify-content: space-between;
+}
+.Discount_RemoveButton{
+    font-size: 10px;
+    background-color: red;
+    border: 1px solid red;
+    color: white;
+    cursor: pointer;
+    display: none;
+    
+    padding: 0px 5px;
+    border-radius: 25px;
+}
+.final_card_placeOrder_button{
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    background-color: var(--orange-colour);
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px solid transparent;
+    border-radius: 20px;
+}
+.HomeScreen_viewCart{
+    position: fixed;
+    bottom: 85px;
+    left: 50%;
+    z-index: 999;
+    height: 45px;
+    border: 2px solid transparent;
+    width: 150px;
+    transform: translate(-50%,50%);
+    display: none;
+    z-index: 1000000000;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 30px;
+    background-color: rgb(2, 188, 52);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.AddToCart_Notification{
+    position: absolute;
+    display: none;
+    align-items: center;
+    bottom: -35px;
+    right: 15px;
+    z-index: 1000;
+    background-color: green;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    justify-content: center;
+    height: 30px;
+    width: 150px;
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+    border-top-left-radius: 80px; 
+}
+.home2_ExpandedCard_notification{
+    position: absolute;
+    display: none;
+    align-items: center;
+    top: -65px;
+    right: 50%;
+    transform: translate(50%,50%);
+    background-color: green;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 2px 20px;
+    justify-content: center;
+    height: 30px;
+    border-radius:30px;
+}
+.Menu_ExpandedCard_notification{
+    position: absolute;
+    display: none;
+    align-items: center;
+    top: -65px;
+    right: 50%;
+    transform: translate(50%,50%);
+    background-color: green;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 2px 20px;
+    justify-content: center;
+    height: 30px;
+    border-radius:30px;
+}
+.FinalCard_Expanded_notification.green{
+    background-color: green;
+    display: none;
+    position: absolute;
+    top: -70px;
+    right: 50%;
+    transform: translate(50%,50%);
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 7px 18px;
+    border-radius: 30px;
+}
+.FinalCard_Expanded_notification.red{
+    background-color: red;
+    display: none;
+    position: absolute;
+    top: -70px;
+    right: 50%;
+    transform: translate(50%,50%);
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 7px 18px;
+    border-radius: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+    .Profile_Logo{
+        display: none;
+        position: relative;
+    }
+    .profile_div{
+        background-color: white;
+        padding: 12px 12px;
+        color: blue;
+        font-weight: bold;
+        width: 25px;
+        height: 25px; 
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid var(--orange-colour);
+        border-radius: 50%;
+    }
+    .fa-bars{
+        font-size: 24px;
+        display: none;
+    }
+    .dropdown-icon-div{
+        display: none;
+    }
+    .homeContentDiv{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 130px 0px 230px 0px;
+        gap: 50px;
+        
+    }
+    .homeContent{
+        font-size: 60px;
+        font-weight: bold;
+    }
+    .home>div{
+        
+        display: flex;
+        align-items: center;
+    }
+    .home>div span{
+        color: var(--orange-colour);
+    
+    }
+    .home>div button{
+        font-size: 20px;
+        width: 300px;
+        padding: 8px 20px;
+        border-radius: 20px;
+        font-weight: bold;
+        border: 3px solid var(--orange-colour);
+    }
+    .OrderNow{
+        color: aliceblue;
+        background-color: var(--orange-colour);
+    }
+    .trackOrder{
+        color: var(--orange-colour);
+        background-color: transparent;
+    }
+    .homepic img{
+        border-radius: 50%;
+        height: 450px;
+        border: 5px solid var(--orange-colour);
+        border-style: dashed;
+        padding: 10px;
+    }
+    .home-end{
+        width: 50%;
+        background-color: white;
+        position: absolute;
+        bottom: 0%;
+        left: 50%;
+        transform: translate(-50%,50%);
+        padding: 20px 20px 20px 20px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        justify-content: space-around;
+        border-radius: 14px;
+        box-shadow: 0 0 10px rgb(132, 131, 131);
+    }
+    .home-end>div{
+        display: flex;
+        flex-direction: row;
+        column-gap: 20px;
+        width: 100%;
+        justify-content:center;
+    }
+    .home-end>div div{
+        width: 50%;
+    }
+    .home-end img{
+        height: 80px;
+    }
+    
+    .home2{
+        margin-top: 250px;
+        
+    }
+    .home2-tittle{
+        padding: 0px 110px;
+        margin-top: 150px;
+        display: flex;
+        gap: clamp(1rem,10vw,5rem);
+        align-items: center;
+        flex-direction: row;
+    
+    }
+    .home2-topic{
+        font-size: 40px;
+        font-weight: bold;
+    }
+    .home2-foods{
+        padding-top: 80px;
+        padding-left: 50px;
+        padding-right: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 60px;
+        column-gap: 50px;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .home2-foods>div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-weight: bold;
+        cursor: default;
+    }
+
+
+.home2_expanded_Card{
+    
+    width: 750px;
+    display: flex;
+    position: relative;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 50px 30px 30px 30px;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    background-color: antiquewhite;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgb(100, 99, 99);
+}
+#Cross_Expanded_home2_FoodCard{
+    position: absolute;
+    font-size: 30px;
+    top: 15px;
+    right: 15px;
+}
+.expanded_home2_image_div{
+    width: 50%;
+    
+   
+}
+.expanded_home2_image_div img{
+    height: 220px;
+    border-radius: 50%;
+    padding: 8px;
+    border: 4px dashed var(--orange-colour);
+}
+.home2_expanded_Content{
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.home2_expanded_Food_Name{
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--orange-colour);
+    text-align: center;
+    text-shadow: 0px 0px 9px white;
+}
+.home2_expanded_rating_vegan_div{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    font-size: 13px;
+    justify-content: space-between;
+    align-items: center;
+}
+.expanded_veganTag.red{
+    color: red;
+}
+.expanded_veganTag.green{
+    color: green;
+}
+.home2_expanded_foods_description{
+    margin-top: 15px;
+    text-align: justify;
+    font-size: 14px;
+}
+.home2_expanded_foods_nutrition_price_tag{
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.home2_expanded_foods_nutrition_info{
+    display: flex;
+    font-size: 13px;
+}
+.home2_expanded_foods_price_info{
+    font-weight: bold;
+}
+.home2_expanded_foodCard_buttons_div{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.home2_expanded_Back_button{
+    padding: 6px 14px 7px 12px;
+    border: 3px solid transparent;
+    border-radius: 15px;
+    background-color: var(--orange-colour);
+    color: #ffffff;
+    font-weight: bold;
+}
+.home2_expanded_AddToCart_button{
+    padding: 8px 15px 6px 12px;
+    border: 3px solid transparent;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--orange-colour);
+    color: #ffffff;
+    font-weight: bold;
+}
+#home2_expanded_Cart_logo{
+    color: white;
+    font-size: 14px;
+}
+
+
+
+
+
+    .home2-foods img{
+        height: 200px;
+        border-radius: 50%;
+        border: 4px dashed var(--orange-colour);
+        padding: 8px;
+        transition: transform 0.4s ease;
+        margin-bottom: 15px;
+    }
+    marquee{
+        margin-top: 40px;
+        padding: 10px 0px;
+        background-color:antiquewhite;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .menu-topic{
+        margin-top: 40px;
+        padding: 0px 110px 0px 110px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .menu-tittle{
+        font-size: 40px;
+        font-weight: bold;
+    }
+    .menu_topic_button{
+        padding: 10px 20px;
+        border-radius: 20px;
+        border: 2px solid var(--orange-colour) ;
+        background-color: var(--orange-colour);
+        color: aliceblue;
+        font-weight: bold;
+    }
+    .food-menu{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 90px;
+        flex-wrap: wrap;
+        column-gap: 70px;
+        row-gap: 110px;
+        padding: 0px 90px 0px 90px;
+    }
+    .menu>h1{
+        margin-top:50px;
+        text-align: center;
+        color: var(--orange-colour);
+    }
+    .food-menu img{
+        height: 180px;
+        border-radius: 50%;
+        border: 4px dashed var(--orange-colour);
+        padding: 8px;
+        position: absolute;
+        transition: transform 0.4s ease;
+        right: -50px;
+        top:-80px;
+    }
+    .foodmenu1{
+        border-radius: 15px;
+        padding: 100px 20px 15px 20px;
+        position: relative;
+        background-color: antiquewhite;
+        cursor: default;
+    }
+    .foodmenu1 span{
+        font-size: large;
+        font-weight: bold;
+    }
+    .foodmenu1 div>p{
+        font-size: large;
+        font-weight: bold;
+    }
+    
+    .foodmenu1 button{
+        padding: 3px 8px;
+        border-radius: 20px;
+        border: 4px solid var(--orange-colour) ;
+        background-color: var(--orange-colour);
+        color: aliceblue;
+        font-weight: bold;
+    }
+    .price-tag{
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .ratings{
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        gap: 3px;
+    }
+    .ratings i{
+        color: rgb(222, 190, 6);
+    }
+
+
+
+
+
+
+
+.Menu_Expanded_FoodCard{
+    width: 750px;
+    padding: 50px 40px;
+    margin-left: 30px;
+    margin-right: 30px;
+    background-color: antiquewhite;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgb(58, 58, 58);
+    display: none;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 38px;
+
+}
+#Cross_Expanded_Menu_FoodCard{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 28px;
+}
+.expanded_Menu_image_div img{
+    height: 220px;    
+    border-radius: 50%;
+    padding: 8px;
+    border: 4px dashed var(--orange-colour);
+}
+.Menu_expanded_Content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.Menu_expanded_Food_Ethnicity{
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--orange-colour);
+    text-align: center;
+    text-shadow: 0px 0px 9px white;
+}
+.Menu_expanded_Food_Name{
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--orange-colour);
+    text-align: center;
+    text-shadow: 0px 0px 9px white;
+}
+.Menu_expanded_rating_vegan_div{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    font-size: 13px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Menu_expanded_veganTag.red{
+    color: red;
+}
+.Menu_expanded_veganTag.green{
+    color: green;
+}
+.Menu_expanded_foods_description{
+    margin-top: 20px;
+    text-align: justify;
+    font-size: 14px;
+}
+.Menu_expanded_foods_nutrition_price_tag{
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.Menu_expanded_foods_nutrition_info{
+    font-size: 13px;
+}
+.Menu_expanded_foods_price_info{
+    font-weight: bold;
+}
+.Menu_expanded_foodCard_buttons_div{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Menu_expanded_Back_button,.Menu_expanded_AddToCart_button{
+    padding: 8px 13px 9px 11px;
+    border: 3px solid transparent;
+    border-radius: 15px;
+    background-color: var(--orange-colour);
+    color: #ffffff;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+    .offers{
+        margin-top: 100px;
+        
+        
+    }
+    .offers>h1{
+        color: var(--orange-colour);
+        text-align: center;
+
+    }
+    .offers-main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+        justify-content: center;
+        gap: 20px;
+    }
+    .offers-1>img{
+        
+        width: 500px;
+
+        border-radius: 15px;
+    }
+    .offers-sub{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        justify-content: center;
+        gap: 20px;
+    }
+    .offers-2 img{
+        height: clamp(10rem,10vw,50rem);
+        width: 500px;
+        border-radius: 15px;
+    }
+    .offers-3 img{
+        height: clamp(10rem,10vw,50rem);
+        width: 500px;
+        border-radius: 15px;
+    }
+
+
+
+
+    .reviews{
+    margin-top: 90px;
+}
+.reviews>h1{
+    color:var(--orange-colour);
+    font-style: italic;
+    text-align: center;
+
+}
+.reviews_TotalDiv{
+    width: 100%;
+    margin-top: 20px;
+    background-color: pink;
+    padding: 60px 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0px 0px 10px rgb(118, 118, 118);
+}
+.review1,.review3{
+    height: 300px;
+    width: 200px;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    background-color: white;
+    padding: 20px 30px;
+    box-shadow: 0px 0px 10px rgb(118, 118, 118);
+
+}
+.review2{
+    display: block;
+    height: 350px;
+    width: 250px;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    background-color: white;
+    padding: 20px 30px;
+    box-shadow: 0px 0px 10px rgb(118, 118, 118);
+
+}
+.reviews img{
+    border-radius: 50%;
+    border: 2px solid black;
+    width: 30px;
+}
+.User_logo_review{
+    border-radius: 50%;
+    background-color: skyblue;
+    border: 2px solid black;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 30px;
+}
+.img_name_div_review1,.img_name_div_review2,.img_name_div_review3{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 16px;
+}
+.review1_namestar_div,.review2_namestar_div,.review3_namestar_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.review_ratings{
+    text-align: start;
+    font-size: 12px;
+}
+.review2_ratings{
+    text-align: start;
+    font-size: 12px;
+}
+.review1_text,.review2_text,.review3_text{
+    margin-top: 15px;
+    text-align: justify;
+    text-indent: 30px; 
+    font-size: 14px;
+}
+.review1_name,.review2_name,.review3_name{
+    font-size: 18px;
+}
+.GiveUsReviewCard{
+    display: none;
+    position: relative;
+    flex-direction: column;
+    background-color: antiquewhite;
+    border-radius: 25px;
+    padding: 40px;
+    box-shadow: 0 0 20px gray;
+}
+.GiveUsReviewCard h2{
+    color:var(--orange-colour);
+    text-align: center;
+}
+.GiveUsReview_nameDiv{
+    margin-top: 30px;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: inset 5px 5px 2px #c3c3c3,inset -5px -5px 2px #ffffffff;;
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+.GiveUsReview_nameDiv i{
+    margin-left: 5px;
+    color: var(--orange-colour);
+}
+.GiveUsReview_nameDiv>input{
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    padding-left: 5px;
+    font-size: 18px;
+}
+.GiveUsReview_nameDiv>input::placeholder{
+    color: rgb(164, 164, 164);
+    font-weight: 400;
+    font-size: 16px;
+}
+.GiveUsReview_starRatings{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+}
+.GiveUsReview_starRatings div{
+    border: 2px solid black;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.star2_review.selected,.star3_review.selected,.star4_review.selected{
+    border: 2px solid black;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+}
+.star1_review{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.star1_review.selected{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: black;
+    color: white;
+}
+.star5_review{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.star5_review.selected{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: black;
+    color: white;
+
+}
+.Review_of_user{
+    height: 150px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 25px;
+    padding: 10px;
+    resize: none;
+}
+.GiveUsReview_Submitbutton{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.Close_giveUsReview{
+    background-color: red;
+    padding: 4px 15px;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+.Submit_giveUsReview{
+    background-color: blue;
+    padding: 4px 15px;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+.GiveUsReview_Notification{
+    position: absolute;
+    top: -50px;
+    right: 50%;
+    width: 300px;
+    transform: translate(50%,50%);
+    display: none;
+    padding: 5px 15px;
+    text-align: center;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    border-radius: 25px;
+}
+
+
+
+
+
+
+
+    .footer{
+        margin-top: 60px;
+        border-top: 4px dashed var(--orange-colour);
+        padding: 50px 80px 80px 80px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        row-gap: 50px;
+        column-gap: 40px;
+        justify-content: space-around;
+        background-color: antiquewhite;
+    }
+    .span{
+        font-size: 20px;
+        font-weight: bold;
+        
+    }
+    .footer span{
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        color: var(--orange-colour);
+    }
+    .footer-contact-apps{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 20px;
+        font-size: 22px;
+    }
+    .locate_us_div iframe{
+    margin-top: 20px;
+    border-radius: 15px;
+    width: 550px;
+    height: 400px;
+}
+.Complaint_card{
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid red;
+    background-color: antiquewhite;
+    border-radius: 30px;
+    padding: 30px;
+    width: 350px;
+    box-shadow: 0px 0px 20px rgb(144, 144, 144);
+}
+.Complaint_card h2{
+    color: var(--orange-colour);
+}
+.Complaint_Image_Input{
+    margin-top: 20px;
+}
+.Complaint_card>p{
+    font-size: 12px;
+}
+.Complaint_Image_div{
+    margin-top: 10px;
+    position: relative;
+    display: none;
+}
+.Complaint_Image{
+    height: 80px;
+    border-radius: 20px;
+}
+.Remove_Complaint_Image{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 2px;
+    right: 2px;
+    line-height: 1;
+    height: 15px;
+    width: 15px;
+    font-weight: bold;
+    background-color: rgb(151, 151, 151);
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+.Complaint_input{
+    margin-top: 20px;
+    resize: none;
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+}
+.Complaints_buttonsDiv{
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.Complaints_Cancel_buttons{
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    padding: 5px 20px;
+    border: 2px solid transparent;
+    border-radius: 30px;
+}
+.Complaints_Submit_buttons{
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    padding: 5px 20px;
+    border: 2px solid transparent;
+    border-radius: 30px;
+}
+.Complaint_contact_info_Email,.Complaint_contact_info{
+    display: flex;
+    font-size: 12px;
+}
+.Complaint_contact_info_Email{
+    margin-left: 5px;
+}
+.Complaint_notification{
+    position: absolute;
+    top: -70px;
+    right: 50%;
+    transform: translate(50%,50%);
+    display: none;
+    text-align: center;
+    background-color: green;
+    color: white;
+    width: 350px;
+    font-weight: bold;
+    padding: 5px 20px;
+    border: 2px solid transparent;
+    border-radius: 30px;
+}
+}
+@media(min-width:481px) and (max-width:768.9px){
+    .home{
+        background-color: antiquewhite;
+        padding: 0px 0px;
+        position: relative;
+        
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+   
+    
+    .navBar{
+        display: flex;
+        position: fixed;
+        padding: 20px 30px 10px 30px;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.445);
+        backdrop-filter: blur(40px);
+        border-bottom: 1px solid rgb(203, 203, 203);
+        box-shadow:0 0 10px rgb(125, 125, 125) ; 
+        z-index: 1;
+        align-items: center;
+        justify-content: space-between;
+
+    
+    }
+    .navBar u{
+        text-decoration: underline;
+        text-decoration-style:dashed;
+        text-decoration-color: var(--orange-colour);
+    }
+    .navBar p{
+        font-size:x-large;
+        font-weight: bold;  
+    }
+    .orange{
+        color: var(--orange-colour);
+    }
+    .navBar>ul{
+        list-style: none;
+        display: none;
+        gap: clamp(0.8rem,5vw,10rem);
+    }
+    .navBar li{
+        font-size: 15px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .navBar>div{
+        display: flex;
+        align-items: center;
+        gap: 25px;
+    }
+    
+    .fa-arrow-right-to-bracket{
+        font-size: 18px;
+        padding: 4px 4px;
+        border-radius: 50%;
+        color: var(--orange-colour);
+    }
+    #nav_cart_logo{
+    font-size: 18px;
+    color: var(--orange-colour);
+    position: relative;
+    cursor: pointer;
+}
+.number_of_orders_display{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: blue;
+    height: 17px;
+    border: 1px solid transparent;
+    display: flex;
+    padding: 2px 4px;
+    align-items: center;
+    justify-content: center;
+    width: 17px;
+    color: white;
+    font-size: 13px;
+    line-height: 0;
+    font-weight: bold;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+
+.Final_cart_Card{
+    width: 400px;
+    border-radius: 30px;
+    border: 2px solid transparent;
+    box-shadow: 0px 0px 20px gray;
+    background-color: antiquewhite;
+    display: none;
+    flex-direction: column;
+    position: relative;
+    padding: 20px 35px;
+    
+}
+#Cross_final_card{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 26px;
+}
+.final_card_heading{
+    text-align: center;
+    font-size: 22px;
+    color: var(--orange-colour);
+    font-weight: bold;
+}
+.YourCartIsEmptyText_OR_TotalNoOfItems{
+    margin-top: 10px;
+    text-align: right;
+    color: rgb(99, 99, 99);
+    font-size: 15px;
+
+}
+.Added_items{
+    overflow-y: auto;
+    height: 200px;
+    margin-top: 20px;
+    list-style-type:circle;
+    
+}
+
+
+.Added_items div{
+    font-size: 15px;
+    list-style-type:circle;
+    font-weight: 500;
+    display: flex;
+    padding-right: 10px;
+    align-items: center;
+    height: 50px;
+
+}
+.Cart_Item_Remove_button{
+    padding: 0px 3px;
+    height: 20px;
+    display: flex;
+    font-size: 10px;
+    align-items: center;
+    color: red;
+    justify-content: center;
+    border: 2px solid transparent;
+    background-color: white;
+    margin-left: 20px;
+    font-weight: 500;
+    border-radius: 25px;
+    
+}
+.final_card_bottom_div{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 20px;
+    padding-top: 20px;
+    justify-content: space-between;
+}
+.final_card_coupon_div{
+    border: 2px solid var(--orange-colour);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    width: 215px;
+    height: 35px;
+    position: relative;
+    background-color: white;
+    padding: 3px 5px 3px 8px;
+}
+#final_card_discount_tags{
+    color: var(--orange-colour);
+}
+.final_card_coupon_input{
+    padding: 2px 4px 2px 12px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    font-size: 16px;
+    width:166px ;
+}
+.final_card_coupon_input::placeholder{
+    color: #969696;
+    font-weight: 100;
+}
+.final_card_discount_EnterIcon_div{
+    background-color: var(--orange-colour);
+    height: 35px;
+    width: 40px;
+    display: flex;
+    position: absolute;
+    right: 0px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 13px;
+    border-top-left-radius: 0px;
+    border-top-right-radius:13px ;
+    border: 2px solid var(--orange-colour);
+    cursor: pointer;
+}
+.final_card_button_price_div{
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+    flex-direction: row;
+
+}
+.final_card_priceAndDetails_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.final_card_priceOnly_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 18px;
+    column-gap: 6px;
+    font-weight: bold;
+}
+.final_card_slashed_price{
+    text-decoration: line-through;
+    color: red;
+    text-decoration-color: blue;
+}
+.final_card_actual_price{
+    color: green;
+}
+.final_card_details_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    position: relative;
+    text-decoration: underline;
+    text-decoration-color: blue;
+    color: blue;
+    cursor: pointer;
+}
+.Detailstext_Icon_div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+.Expanded_FinalCartDetails{
+    position: absolute;
+    background-color: rgba(255, 255, 255);
+    backdrop-filter: blur(240px);
+    cursor: default;
+    width: 250px;
+    bottom: -22px;
+    display: none;
+    left: -70px;
+    border-radius: 30px;
+    border: 2px solid blue; 
+    padding: 40px 20px 20px 20px;
+}
+#Cross_final_card_details{
+    position: absolute;
+    right: 15px;
+    color: black;
+    top: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.Expanded_FinalCartDetails div{
+    display: flex;
+    width: 180px;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 6px;
+    margin-top: 4px;
+    justify-content: space-between;
+}
+.Discount_RemoveButton{
+    font-size: 10px;
+    background-color: red;
+    border: 1px solid red;
+    color: white;
+    cursor: pointer;
+    display: none;
+    
+    padding: 0px 5px;
+    border-radius: 25px;
+}
+.final_card_placeOrder_button{
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    background-color: var(--orange-colour);
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid transparent;
+    border-radius: 20px;
+}
+.HomeScreen_viewCart{
+    position: fixed;
+    bottom: 60px;
+    left: 50%;
+    z-index: 999;
+    height: 45px;
+    border: 2px solid transparent;
+    width: 150px;
+    transform: translate(-50%,50%);
+    display: none;
+    z-index: 1000000000;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 30px;
+    background-color: rgb(2, 188, 52);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.AddToCart_Notification{
+    position: absolute;
+    display: none;
+    align-items: center;
+    bottom: -35px;
+    right: 15px;
+    z-index: 1000;
+    background-color: green;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    justify-content: center;
+    height: 30px;
+    width: 150px;
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+    border-top-left-radius: 80px; 
+}
+.home2_ExpandedCard_notification{
+    position: absolute;
+    display: none;
+    align-items: center;
+    top: -65px;
+    right: 50%;
+    transform: translate(50%,50%);
+    background-color: green;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 2px 20px;
+    justify-content: center;
+    height: 30px;
+    border-radius:30px;
+}
+.Menu_ExpandedCard_notification{
+    position: absolute;
+    display: none;
+    align-items: center;
+    top: -65px;
+    right: 50%;
+    transform: translate(50%,50%);
+    background-color: green;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 2px 20px;
+    justify-content: center;
+    height: 30px;
+    border-radius:30px;
+}
+.FinalCard_Expanded_notification.green{
+    background-color: green;
+    display: none;
+    position: absolute;
+    top: -70px;
+    right: 50%;
+    transform: translate(50%,50%);
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 7px 18px;
+    border-radius: 30px;
+}
+.FinalCard_Expanded_notification.red{
+    background-color: red;
+    display: none;
+    position: absolute;
+    top: -70px;
+    right: 50%;
+    transform: translate(50%,50%);
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 7px 18px;
+    border-radius: 30px;
+}
+
+
+
+
+
+
+
+
+
+    .Profile_Logo{
+        display: none;
+        position: relative;
+    }
+    .profile_div{
+        background-color: white;
+        padding: 12px 12px;
+        color: blue;
+        font-weight: bold;
+        width: 25px;
+        height: 25px; 
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid var(--orange-colour);
+        border-radius: 50%;
+    }
+    .fa-bars{
+        font-size: 24px;
+        display: flex;
+        color: black;
+        position: relative;
+        
+    }
+    .dropdown-icon-div{
+        position: absolute;
+        z-index: 999;
+        width: 250px;
+        right: 0px;
+        top: 0;
+        display: none;
+        flex-direction: column;
+        row-gap: 40px;
+        background-color:rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(4px);
+        border: 2px solid transparent;
+        box-shadow: 0 0 20px rgba(37, 37, 37, 0.26);
+        
+    }
+    .dropdown-icon-div.show{
+        position: absolute;
+        z-index: 999;
+        width: 250px;
+        right: 0px;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+        background-color:rgba(255, 255, 255, 0.953);
+        backdrop-filter: blur(120px);
+        border: 2px solid transparent;
+        box-shadow: 0 0 20px rgba(37, 37, 37, 0.26);
+        
+    }
+    #fa-xmark{
+        font-size:30px ;
+        position: relative;
+        top: 18px;
+        left: 195px;  
+    }
+
+    .drop-links-div{
+        padding: 30px;
+        width: 100%;   
+    }
+    .drop-links{
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+        font-size: 18px;
+    }
+    .drop-links a{
+        padding: 8px;
+        border: 2px solid transparent;
+        border-radius: 20px; 
+    }
+    .homeContentDiv{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 120px 0px 230px 0px;
+        gap: 50px;
+        
+    }
+    .homeContent{
+        font-size: 40px;
+        font-weight: bold;
+    }
+    .home>div{
+        
+        display: flex;
+        align-items: center;
+    }
+    .home>div span{
+        color: var(--orange-colour);
+    
+    }
+    .home>div button{
+        font-size: 20px;
+        width: 300px;
+        padding: 8px 20px;
+        border-radius: 20px;
+        font-weight: bold;
+        border: 3px solid var(--orange-colour);
+    }
+    .OrderNow{
+        color: aliceblue;
+        background-color: var(--orange-colour);
+    }
+    .trackOrder{
+        color: var(--orange-colour);
+        background-color: transparent;
+    }
+    .homepic img{
+        border-radius: 50%;
+        height: 350px;
+        border: 5px solid var(--orange-colour);
+        border-style: dashed;
+        padding: 10px;
+    }
+    .home-end{
+        
+        width: 80%;
+        background-color: white;
+        position: absolute;
+        bottom: 0%;
+        left: 50%;
+        transform: translate(-50%,50%);
+        padding: 20px 20px 20px 20px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        justify-content: space-around;
+        border-radius: 14px;
+        box-shadow: 0 0 10px rgb(132, 131, 131);
+    }
+    .home-end>div{
+        display: flex;
+        flex-direction: row;
+        column-gap: 20px;
+        width: 100%;
+        justify-content:center;
+    }
+    .home-end>div div{
+        width: 50%;
+    }
+    .home-end img{
+        height: 80px;
+    }
+    
+    .home2{
+        margin-top: 230px;
+        
+    }
+    .home2-tittle{
+        padding: 0px 50px;
+        margin-top: 130px;
+        display: flex;
+        gap: clamp(1rem,10vw,5rem);
+        align-items: center;
+        flex-direction: row;
+    
+    }
+    .home2-topic{
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .home2-foods{
+        padding-top: 60px;
+        padding-left: 40px;
+        padding-right: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 60px;
+        column-gap: 40px;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .home2-foods>div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-weight: bold;
+        cursor: default;
+    }
+
+
+
+
+.home2_expanded_Card{
+    
+    width: 500px;
+    display: flex;
+    position: relative;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 40px 0px 30px 0px;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: antiquewhite;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgb(100, 99, 99);
+}
+#Cross_Expanded_home2_FoodCard{
+    position: absolute;
+    font-size: 30px;
+    top: 15px;
+    right: 15px;
+}
+.expanded_home2_image_div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+   
+}
+.expanded_home2_image_div img{
+    height: 240px;
+    border-radius: 50%;
+    padding: 8px;
+    border: 4px dashed var(--orange-colour);
+}
+.home2_expanded_Content{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.home2_expanded_Food_Name{
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--orange-colour);
+    text-align: center;
+    text-shadow: 0px 0px 9px white;
+}
+.home2_expanded_rating_vegan_div{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    font-size: 13px;
+    justify-content: space-between;
+    align-items: center;
+}
+.expanded_veganTag.red{
+    color: red;
+}
+.expanded_veganTag.green{
+    color: green;
+}
+.home2_expanded_foods_description{
+    margin-top: 15px;
+    text-align: justify;
+    font-size: 14px;
+}
+.home2_expanded_foods_nutrition_price_tag{
+    display: flex;
+    width: 100%;
+    margin-top: 15px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.home2_expanded_foods_nutrition_info{
+    display: flex;
+    font-size: 13px;
+}
+.home2_expanded_foods_price_info{
+    font-weight: bold;
+}
+.home2_expanded_foodCard_buttons_div{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.home2_expanded_Back_button{
+    padding: 6px 14px 7px 12px;
+    border: 3px solid transparent;
+    border-radius: 15px;
+    background-color: var(--orange-colour);
+    color: #ffffff;
+    font-weight: bold;
+}
+.home2_expanded_AddToCart_button{
+    padding: 8px 15px 6px 12px;
+    border: 3px solid transparent;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--orange-colour);
+    color: #ffffff;
+    font-weight: bold;
+}
+#home2_expanded_Cart_logo{
+    color: white;
+    font-size: 14px;
+}
+
+
+
+
+
+    .home2-foods img{
+        height: 180px;
+        border-radius: 50%;
+        border: 4px dashed var(--orange-colour);
+        padding: 8px;
+        transition: transform 0.4s ease;
+        margin-bottom: 15px;
+    }
+    marquee{
+        margin-top: 40px;
+        padding: 10px 0px;
+        background-color:antiquewhite;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .menu-topic{
+        margin-top: 30px;
+        padding: 0px 50px 0px 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .menu-tittle{
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .menu_topic_button{
+        padding: 10px 20px;
+        border-radius: 20px;
+        border: 2px solid var(--orange-colour) ;
+        background-color: var(--orange-colour);
+        color: aliceblue;
+        font-weight: bold;
+    }
+    .food-menu{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 60px;
+        flex-wrap: wrap;
+        column-gap: 70px;
+        row-gap: 100px;
+        padding: 0px 80px 0px 50px;
+    }
+    .menu>h1{
+        margin-top:50px;
+        text-align: center;
+        color: var(--orange-colour);
+    }
+    .food-menu img{
+        height: 150px;
+        border-radius: 50%;
+        border: 4px dashed var(--orange-colour);
+        padding: 4px;
+        position: absolute;
+        transition: transform 0.4s ease;
+        right: -40px;
+        top:-50px;
+    }
+    .foodmenu1{
+        
+        display: flex;
+        flex-direction: column;
+        
+        border-radius: 15px;
+        padding: 100px 20px 15px 20px;
+        position: relative;
+        background-color: antiquewhite;
+        cursor: default;
+    }
+    .foodmenu1 span{
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .foodmenu1 div>p{
+        font-size: 16px;
+        font-weight: bold;
+    }
+    .foodmenu1>div{
+        width: 100%;
+        margin-top: 15px;
+        
+    }
+    .foodmenu1 button{
+        padding: 4px 7px;
+        border-radius: 20px;
+        border: 2px solid var(--orange-colour) ;
+        background-color: var(--orange-colour);
+        color: aliceblue;
+        font-weight: bold;
+    }
+    .price-tag{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .ratings{
+        font-size:12px;
+        display: flex;
+        align-items: center;
+        gap: 3px;
+    }
+    .ratings i{
+        color: rgb(222, 190, 6);
+    }
+
+
+
+
+
+
+.Menu_Expanded_FoodCard{
+    width: 500px;
+    padding: 40px 45px;
+    margin-left: 30px;
+    margin-right: 30px;
+    background-color: antiquewhite;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    box-shadow: 0px 0px 100px rgb(58, 58, 58);
+    display: none;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    column-gap: 25px;
+
+}
+#Cross_Expanded_Menu_FoodCard{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 28px;
+}
+.expanded_Menu_image_div img{
+    height: 220px;    
+    border-radius: 50%;
+    padding: 8px;
+    border: 4px dashed var(--orange-colour);
+}
+.Menu_expanded_Content{
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.Menu_expanded_Food_Ethnicity{
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--orange-colour);
+    text-align: center;
+    text-shadow: 0px 0px 9px white;
+}
+.Menu_expanded_Food_Name{
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--orange-colour);
+    text-align: center;
+    text-shadow: 0px 0px 9px white;
+}
+.Menu_expanded_rating_vegan_div{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    font-size: 13px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Menu_expanded_veganTag.red{
+    color: red;
+}
+.Menu_expanded_veganTag.green{
+    color: green;
+}
+.Menu_expanded_foods_description{
+    margin-top: 15px;
+    text-align: justify;
+    font-size: 14px;
+}
+.Menu_expanded_foods_nutrition_price_tag{
+    margin-top: 15px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.Menu_expanded_foods_nutrition_info{
+    font-size: 13px;
+}
+.Menu_expanded_foods_price_info{
+    font-weight: bold;
+}
+.Menu_expanded_foodCard_buttons_div{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Menu_expanded_Back_button,.Menu_expanded_AddToCart_button{
+    padding: 8px 13px 9px 11px;
+    border: 3px solid transparent;
+    border-radius: 15px;
+    background-color: var(--orange-colour);
+    color: #ffffff;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+    .offers{
+        margin-top: 70px;
+        
+        
+    }
+    .offers>h1{
+        color: var(--orange-colour);
+        text-align: center;
+
+    }
+    .offers-main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+        justify-content: center;
+        gap: 20px;
+    }
+    .offers-1>img{
+        height: clamp(10rem,40vw,50rem);
+        border-radius: 15px;
+    }
+    .offers-sub{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        justify-content: center;
+        gap: 20px;
+    }
+    .offers-2 img{
+        height: 100px;
+        width:clamp(10rem,40vw,50rem);
+        border-radius: 15px;
+    }
+    .offers-3 img{
+        height: 100px;
+        width: clamp(10rem,40vw,50rem);
+        border-radius: 15px;
+    }
+
+
+
+
+
+.reviews{
+    margin-top: 90px;
+}
+.reviews>h1{
+    color:var(--orange-colour);
+    font-style: italic;
+    text-align: center;
+
+}
+.reviews_TotalDiv{
+    width: 100%;
+    margin-top: 20px;
+    background-color: pink;
+    padding: 60px 30px;
+    display: flex;
+    row-gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0px 0px 10px rgb(118, 118, 118);
+}
+.review1,.review3{
+   
+    width: 80%;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    background-color: white;
+    padding: 20px 30px;
+    box-shadow: 0px 0px 10px rgb(118, 118, 118);
+
+}
+.review2{
+    display: block;
+   
+    width: 100%;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    background-color: white;
+    padding: 20px 30px;
+    box-shadow: 0px 0px 10px rgb(118, 118, 118);
+
+}
+.reviews img{
+    border-radius: 50%;
+    border: 2px solid black;
+    width: 30px;
+}
+.User_logo_review{
+    border-radius: 50%;
+    background-color: skyblue;
+    border: 2px solid black;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+}
+.img_name_div_review1,.img_name_div_review2,.img_name_div_review3{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 16px;
+}
+.review1_namestar_div,.review2_namestar_div,.review3_namestar_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.review_ratings{
+    text-align: start;
+    font-size: 12px;
+}
+.review2_ratings{
+    text-align: start;
+    font-size: 12px;
+}
+.review1_name,.review2_name,.review3_name{
+    font-size: 17px;
+}
+.review1_text,.review2_text,.review3_text{
+    margin-top: 15px;
+    text-align: justify;
+    text-indent: 30px; 
+    font-size: 13.5px;
+}
+.GiveUsReviewCard{
+    display: none;
+    position: relative;
+    flex-direction: column;
+    background-color: antiquewhite;
+    border-radius: 25px;
+    padding: 40px;
+    box-shadow: 0 0 20px gray;
+}
+.GiveUsReviewCard h2{
+    color:var(--orange-colour);
+    text-align: center;
+}
+.GiveUsReview_nameDiv{
+    margin-top: 30px;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: inset 5px 5px 2px #c3c3c3,inset -5px -5px 2px #ffffffff;;
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+.GiveUsReview_nameDiv i{
+    margin-left: 5px;
+    color: var(--orange-colour);
+}
+.GiveUsReview_nameDiv>input{
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    padding-left: 5px;
+    font-size: 18px;
+}
+.GiveUsReview_nameDiv>input::placeholder{
+    color: rgb(164, 164, 164);
+    font-weight: 400;
+    font-size: 16px;
+}
+.GiveUsReview_starRatings{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+}
+.GiveUsReview_starRatings div{
+    border: 2px solid black;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.star2_review.selected,.star3_review.selected,.star4_review.selected{
+    border: 2px solid black;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+}
+.star1_review{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.star1_review.selected{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: black;
+    color: white;
+}
+.star5_review{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.star5_review.selected{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: black;
+    color: white;
+
+}
+.Review_of_user{
+    height: 150px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 25px;
+    padding: 10px;
+    resize: none;
+}
+.GiveUsReview_Submitbutton{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.Close_giveUsReview{
+    background-color: red;
+    padding: 4px 15px;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+.Submit_giveUsReview{
+    background-color: blue;
+    padding: 4px 15px;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+.GiveUsReview_Notification{
+    position: absolute;
+    top: -50px;
+    right: 50%;
+    width: 300px;
+    transform: translate(50%,50%);
+    display: none;
+    padding: 3px 15px;
+    text-align: center;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    border-radius: 25px;
+}
+
+
+
+
+
+
+
+    .footer{
+        margin-top: 60px;
+        border-top: 4px dashed var(--orange-colour);
+        padding: 50px 80px 80px 80px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        row-gap: 50px;
+        column-gap: 40px;
+        justify-content: space-around;
+        background-color: antiquewhite;
+    }
+    
+    .span{
+        font-size: 20px;
+        font-weight: bold;
+        
+    }
+    .footer span{
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        color: var(--orange-colour);
+    }
+    .footer-contact-apps{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 20px;
+        font-size: 18px;
+    }
+    .locate_us_div iframe{
+    margin-top: 20px;
+    border-radius: 15px;
+    width: 400px;
+    height: 450px;
+}
+.Complaint_card{
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid red;
+    background-color: antiquewhite;
+    border-radius: 30px;
+    padding: 30px;
+    width: 350px;
+    box-shadow: 0px 0px 20px rgb(144, 144, 144);
+}
+.Complaint_card h2{
+    color: var(--orange-colour);
+}
+.Complaint_Image_Input{
+    margin-top: 20px;
+}
+.Complaint_card>p{
+    font-size: 12px;
+}
+.Complaint_Image_div{
+    margin-top: 10px;
+    position: relative;
+    display: none;
+}
+.Complaint_Image{
+    height: 80px;
+    border-radius: 20px;
+}
+.Remove_Complaint_Image{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 2px;
+    right: 2px;
+    line-height: 1;
+    height: 15px;
+    width: 15px;
+    font-weight: bold;
+    background-color: rgb(151, 151, 151);
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+.Complaint_input{
+    margin-top: 20px;
+    resize: none;
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+}
+.Complaints_buttonsDiv{
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.Complaints_Cancel_buttons{
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    padding: 5px 20px;
+    border: 2px solid transparent;
+    border-radius: 30px;
+}
+.Complaints_Submit_buttons{
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    padding: 5px 20px;
+    border: 2px solid transparent;
+    border-radius: 30px;
+}
+.Complaint_contact_info_Email,.Complaint_contact_info{
+    display: flex;
+    font-size: 12px;
+}
+.Complaint_contact_info_Email{
+    margin-left: 5px;
+}
+.Complaint_notification{
+    position: absolute;
+    top: -70px;
+    right: 50%;
+    transform: translate(50%,50%);
+    display: none;
+    text-align: center;
+    background-color: green;
+    color: white;
+    width: 350px;
+    font-weight: bold;
+    padding: 5px 20px;
+    border: 2px solid transparent;
+    border-radius: 30px;
+}  
+}
+@media(max-width:480.9px){
+    .home{
+        background-color: antiquewhite;
+        padding: 0px 0px;
+        position: relative;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+    }
+    
+    .navBar{
+        display: flex;
+        position: fixed;
+        padding: 20px 30px 10px 30px;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.445);
+        backdrop-filter: blur(40px);
+        border-bottom: 1px solid rgb(203, 203, 203);
+        box-shadow:0 0 10px rgb(125, 125, 125) ; 
+        z-index: 1;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .navBar u{
+        text-decoration: underline;
+        text-decoration-style:dashed;
+        text-decoration-color: var(--orange-colour);
+    }
+    .navBar p{
+        font-size:x-large;
+        font-weight: bold;  
+    }
+    .orange{
+        color: var(--orange-colour);
+    }
+    .navBar>ul{
+        list-style: none;
+        display: none;
+        gap: clamp(0.8rem,5vw,10rem);
+    }
+    .navBar li{
+        font-size: 15px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .navBar>div{
+        display: flex;
+        align-items: center;
+        gap: 18px;
+    }
+    
+    .fa-arrow-right-to-bracket{
+        font-size: 18px;
+        padding: 4px 4px;
+        border-radius: 50%;
+        color: var(--orange-colour);
+    }
+    #nav_cart_logo{
+    font-size: 18px;
+    color: var(--orange-colour);
+    position: relative;
+    cursor: pointer;
+}
+.number_of_orders_display{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: blue;
+    height: 16px;
+    border: 1px solid transparent;
+    display: flex;
+    padding: 2px 4px;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    color: white;
+    font-size: 12px;
+    line-height: 0;
+    font-weight: bold;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+.Final_cart_Card{
+    width: 350px;
+    margin: 0px 20px;
+    border-radius: 30px;
+    border: 2px solid transparent;
+    box-shadow: 0px 0px 20px gray;
+    background-color: antiquewhite;
+    display: none;
+    flex-direction: column;
+    position: relative;
+    padding: 20px 25px;
+    
+}
+#Cross_final_card{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 26px;
+}
+.final_card_heading{
+    text-align: center;
+    font-size: 20px;
+    color: var(--orange-colour);
+    font-weight: bold;
+}
+.YourCartIsEmptyText_OR_TotalNoOfItems{
+    margin-top: 10px;
+    text-align: right;
+    color: rgb(99, 99, 99);
+    font-size: 15px;
+
+}
+.Added_items{
+    overflow-y: auto;
+    height: 200px;
+    margin-top: 20px;
+    list-style-type:circle;
+    
+}
+
+
+.Added_items div{
+    font-size: 15px;
+    list-style-type:circle;
+    font-weight: 500;
+    display: flex;
+    padding-right: 10px;
+    align-items: center;
+    height: 50px;
+
+}
+.Cart_Item_Remove_button{
+    padding: 0px 3px;
+    height: 20px;
+    display: flex;
+    font-size: 10px;
+    align-items: center;
+    color: red;
+    justify-content: center;
+    border: 2px solid transparent;
+    background-color: white;
+    margin-left: 20px;
+    font-weight: 600;
+    border-radius: 25px;
+    
+}
+.final_card_bottom_div{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 20px;
+    padding-top: 20px;
+    justify-content: space-between;
+}
+.final_card_coupon_div{
+    border: 2px solid var(--orange-colour);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    width: 215px;
+    height: 35px;
+    position: relative;
+    background-color: white;
+    padding: 3px 5px 3px 8px;
+}
+#final_card_discount_tags{
+    color: var(--orange-colour);
+}
+.final_card_coupon_input{
+    padding: 2px 4px 2px 12px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    font-size: 16px;
+    width:166px ;
+}
+.final_card_coupon_input::placeholder{
+    color: #969696;
+    font-weight: 100;
+}
+.final_card_discount_EnterIcon_div{
+    background-color: var(--orange-colour);
+    height: 35px;
+    width: 40px;
+    display: flex;
+    position: absolute;
+    right: 0px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 13px;
+    border-top-left-radius: 0px;
+    border-top-right-radius:13px ;
+    border: 2px solid var(--orange-colour);
+    cursor: pointer;
+}
+.final_card_button_price_div{
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+    flex-direction: row;
+
+}
+.final_card_priceAndDetails_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.final_card_priceOnly_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 17px;
+    column-gap: 6px;
+    font-weight: bold;
+}
+.final_card_slashed_price{
+    text-decoration: line-through;
+    color: red;
+    text-decoration-color: blue;
+}
+.final_card_actual_price{
+    color: green;
+}
+.final_card_details_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: italic;
+    position: relative;
+    text-decoration: underline;
+    text-decoration-color: blue;
+    color: blue;
+    cursor: pointer;
+}
+.Detailstext_Icon_div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+}
+.Expanded_FinalCartDetails{
+    position: absolute;
+    background-color: rgba(255, 255, 255);
+    backdrop-filter: blur(240px);
+    cursor: default;
+    width: 220px;
+    bottom: -22px;
+    display: none;
+    left: -30px;
+    border-radius: 30px;
+    border: 2px solid blue; 
+    padding: 40px 20px 20px 20px;
+}
+#Cross_final_card_details{
+    position: absolute;
+    right: 15px;
+    color: black;
+    top: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.Expanded_FinalCartDetails div{
+    display: flex;
+    width: 150px;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 6px;
+    margin-top: 4px;
+    justify-content: space-between;
+}
+.Discount_RemoveButton{
+    font-size: 10px;
+    background-color: red;
+    border: 1px solid red;
+    color: white;
+    cursor: pointer;
+    display: none;
+    
+    padding: 0px 5px;
+    border-radius: 25px;
+}
+.final_card_placeOrder_button{
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    background-color: var(--orange-colour);
+    font-size: 18px;
+    font-weight: bold;
+    border: 2px solid transparent;
+    border-radius: 20px;
+}
+.HomeScreen_viewCart{
+    position: fixed;
+    bottom: 60px;
+    left: 50%;
+    z-index: 999;
+    height: 45px;
+    border: 2px solid transparent;
+    width: 150px;
+    transform: translate(-50%,50%);
+    display: none;
+    z-index: 1000000000;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 30px;
+    background-color: rgb(2, 188, 52);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+.AddToCart_Notification{
+    position: absolute;
+    display: none;
+    align-items: center;
+    bottom: -35px;
+    right: 15px;
+    z-index: 1000;
+    background-color: green;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    justify-content: center;
+    height: 30px;
+    width: 150px;
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+    border-top-left-radius: 80px; 
+}
+.home2_ExpandedCard_notification{
+    position: absolute;
+    display: none;
+    align-items: center;
+    top: -65px;
+    right: 50%;
+    transform: translate(50%,50%);
+    background-color: green;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 2px 20px;
+    justify-content: center;
+    height: 30px;
+    border-radius:30px;
+}
+.Menu_ExpandedCard_notification{
+    position: absolute;
+    display: none;
+    align-items: center;
+    top: -65px;
+    right: 50%;
+    transform: translate(50%,50%);
+    background-color: green;
+    color: white;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 2px 20px;
+    justify-content: center;
+    height: 30px;
+    border-radius:30px;
+}
+.FinalCard_Expanded_notification.green{
+    background-color: green;
+    display: none;
+    position: absolute;
+    top: -70px;
+    right: 50%;
+    flex-wrap: wrap;
+    transform: translate(50%,50%);
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 7px 18px;
+    border-radius: 30px;
+}
+.FinalCard_Expanded_notification.red{
+    background-color: red;
+    display: none;
+    position: absolute;
+    top: -70px;
+    right: 50%;
+    transform: translate(50%,50%);
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 7px 18px;
+    border-radius: 30px;
+}
+
+
+
+
+
+
+
+
+
+    .Profile_Logo{
+        display: none;
+        position: relative;
+    }
+    .profile_div{
+        background-color: white;
+        padding: 12px 12px;
+        color: blue;
+        font-weight: bold;
+        width: 25px;
+        height: 25px; 
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid var(--orange-colour);
+        border-radius: 50%;
+    }
+    .fa-bars{
+        font-size: 21px;
+        display: flex;
+        color: black;
+        position: relative;
+        
+    }
+    .dropdown-icon-div{
+        position: absolute;
+        z-index: 999;
+        width: 200px;
+        right: 0px;
+        top: 0;
+        display: none;
+        flex-direction: column;
+        row-gap: 20px;
+        background-color:rgba(255, 255, 255, 0.4);
+        backdrop-filter: blur(4px);      
+        border: 2px solid transparent;
+        box-shadow: 0 0 20px rgba(37, 37, 37, 0.26);
+        
+    }
+    .dropdown-icon-div.show{
+        position: absolute;
+        z-index: 999;
+        width: 200px;
+        right: 0px;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        background-color:rgba(255, 255, 255, 0.953);
+        backdrop-filter: blur(40px);     
+        border: 2px solid transparent;
+        box-shadow: 0 0 20px rgba(37, 37, 37, 0.26);
+        
+    }
+    #fa-xmark{
+        font-size:25px ;
+        position: relative;
+        top: 18px;
+        left: 162px;  
+    }
+
+    .drop-links-div{
+        padding: 25px;
+        width: 100%;   
+    }
+    .drop-links{
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        font-size: 18px;
+    }
+    .drop-links a{
+        padding: 8px;
+        border: 2px solid transparent;
+        border-radius: 20px; 
+    }
+    .homeContentDiv{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 100px 0px 190px 0px;
+        gap: 30px;
+        
+    }
+    .homeContent{
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .home>div{
+        
+        display: flex;
+        align-items: center;
+    }
+    .home>div span{
+        color: var(--orange-colour);
+    
+    }
+    .home>div button{
+        font-size: 15px;
+        width: 200px;
+        padding: 8px 20px;
+        margin-top: 15px;
+        border-radius: 20px;
+        font-weight: bold;
+        border: 2px solid var(--orange-colour);
+    }
+    .OrderNow{
+        color: aliceblue;
+        background-color: var(--orange-colour);
+    }
+    .trackOrder{
+        color: var(--orange-colour);
+        background-color: transparent;
+    }
+    .homepic img{
+        border-radius: 50%;
+        height: 230px;
+        border: 5px solid var(--orange-colour);
+        border-style: dashed;
+        padding: 10px;
+    }
+    .home-end{
+        
+        width: 70%;
+        background-color: white;
+        position: absolute;
+        bottom: 0%;
+        left: 50%;
+        transform: translate(-50%,50%);
+        padding: 20px 20px 20px 20px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        justify-content: space-around;
+        border-radius: 14px;
+        box-shadow: 0 0 10px rgb(132, 131, 131);
+    }
+    .home-end h1{
+        font-size: 13px;
+    }
+    .home-end p{
+        font-size: 12px;
+    }
+    .home-end>div{
+        display: flex;
+        flex-direction: row;
+        column-gap: 20px;
+        width: 100%;
+        justify-content:center;
+    }
+    .home-end>div div{
+        width: 50%;
+    }
+    .home-end img{
+        height: 50px;
+    }
+    
+    .home2{
+        margin-top: 200px;
+        
+    }
+    .home2-tittle{
+        padding: 0px 40px;
+        margin-top: 130px;
+        display: flex;
+        gap: clamp(1rem,10vw,5rem);
+        align-items: center;
+        flex-direction: row;
+    
+    }
+    .home2-topic{
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .home2-content{
+        font-size: 12px;
+    }
+    .home2-foods{
+        padding-top: 30px;
+        padding-left: 30px;
+        padding-right: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 30px;
+        column-gap: 50px;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .home2-foods>div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-weight: bold;
+        cursor: default;
+    }
+
+
+
+
+.home2_expanded_Card{
+    display: flex;
+    position: relative;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding: 40px 0px 30px 0px;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background-color: antiquewhite;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20pxrgb(100, 99, 99)k;
+}
+#Cross_Expanded_home2_FoodCard{
+    position: absolute;
+    font-size: 30px;
+    top: 15px;
+    right: 15px;
+}
+.expanded_home2_image_div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+   
+}
+.expanded_home2_image_div img{
+    height: 210px;
+    border-radius: 50%;
+    padding: 8px;
+    border: 4px dashed var(--orange-colour);
+}
+.home2_expanded_Content{
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.home2_expanded_Food_Name{
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--orange-colour);
+    text-align: center;
+    text-shadow: 0px 0px 9px white;
+}
+.home2_expanded_rating_vegan_div{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    font-size: 13px;
+    justify-content: space-between;
+    align-items: center;
+}
+.expanded_veganTag.red{
+    color: red;
+}
+.expanded_veganTag.green{
+    color: green;
+}
+.home2_expanded_foods_description{
+    margin-top: 15px;
+    text-align: justify;
+    font-size: 14px;
+}
+.home2_expanded_foods_nutrition_price_tag{
+    display: flex;
+    width: 100%;
+    margin-top: 15px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.home2_expanded_foods_nutrition_info{
+    display: flex;
+    font-size: 12px;
+}
+.home2_expanded_foods_price_info{
+    font-weight: bold;
+}
+.home2_expanded_foodCard_buttons_div{
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    row-gap: 20px;
+    align-items: center;
+}
+.home2_expanded_Back_button{
+    padding: 6px 14px 7px 12px;
+    
+    border: 3px solid transparent;
+    border-radius: 15px;
+    background-color: var(--orange-colour);
+    color: #ffffff;
+    font-weight: bold;
+}
+.home2_expanded_AddToCart_button{
+    padding: 8px 15px 6px 12px;
+    border: 3px solid transparent;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--orange-colour);
+    color: #ffffff;
+    font-weight: bold;
+}
+#home2_expanded_Cart_logo{
+    color: white;
+    font-size: 14px;
+}
+
+
+
+
+    .home2-foods img{
+        height: 140px;
+        border-radius: 50%;
+        border: 4px dashed var(--orange-colour);
+        padding: 8px;
+        transition: transform 0.4s ease;
+        margin-bottom: 10px;
+    }
+    .home2-foods p{
+        font-size: 14px;
+    }
+    marquee{
+        margin-top: 40px;
+        padding: 10px 0px;
+        background-color:antiquewhite;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    
+    .menu-topic{
+        margin-top: 30px;
+        padding: 0px 45px 0px 45px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .menu-topic p{
+        font-size: 12px;
+    }
+    .menu-tittle{
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .menu_topic_button{
+        padding: 3px 7px;
+        border-radius: 20px;
+        font-size: 12px;
+        border: 2px solid var(--orange-colour) ;
+        background-color: var(--orange-colour);
+        color: aliceblue;
+        font-weight: bold;
+    }
+    .food-menu{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 60px;
+        flex-wrap: wrap;
+        column-gap: 40px;
+        row-gap: 80px;
+        padding: 0px 40px 0px 20px;
+        
+    }
+    .menu>h1{
+        margin-top:40px;
+        text-align: center;
+        color: var(--orange-colour);
+    }
+    .food-menu img{
+        height: 107px;
+        border-radius: 50%;
+        border: 3px dashed var(--orange-colour);
+        padding: 2px;
+        position: absolute;
+        transition: transform 0.4s ease;
+        right: -30px;
+        top:-40px;
+    }
+    .foodmenu1{
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        border-radius: 15px;
+        padding: 65px 15px 10px 15px;
+        position: relative;
+        background-color: antiquewhite;
+        cursor: default;
+    }
+    .foodmenu1 span{
+        font-size:16px;
+        font-weight: bold;
+    }
+    .foodmenu1 div>p{
+        font-size: 14.5px;
+        font-weight: bold;
+    }
+    .foodmenu1>div{
+        width: 100%;
+        margin-top: 15px;
+        
+    }
+    .foodmenu1 button{
+        padding: 4px 9px;
+        border-radius: 20px;
+        font-size: 13px;
+        font-weight: bold;
+        border: 2px solid var(--orange-colour) ;
+        background-color: var(--orange-colour);
+        color: aliceblue;
+        
+    }
+    .price-tag{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 13px;
+        font-weight: bold;
+    }
+    .ratings{
+        display: flex;
+        align-items: center;
+        gap: 3px;
+        font-size: 9px;
+    }
+    .ratings i{
+        font-size: 10px;
+        color: rgb(222, 190, 6);
+    }
+
+
+
+
+
+.Menu_Expanded_FoodCard{
+    width: 450px;
+    padding: 45px 25px 30px 25px;
+    margin-left: 30px;
+    margin-right: 30px;
+    background-color: antiquewhite;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    box-shadow: 0px 0px 450px rgb(58, 58, 58);
+    display: none;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    column-gap: 25px;
+
+}
+#Cross_Expanded_Menu_FoodCard{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 30px;
+}
+.expanded_Menu_image_div img{
+    height: 210px;    
+    border-radius: 50%;
+    padding: 8px;
+    border: 4px dashed var(--orange-colour);
+}
+.Menu_expanded_Content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.Menu_expanded_Food_Ethnicity{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--orange-colour);
+    text-align: center;
+    text-shadow: 0px 0px 9px white;
+}
+.Menu_expanded_Food_Name{
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--orange-colour);
+    text-align: center;
+    text-shadow: 0px 0px 9px white;
+}
+.Menu_expanded_rating_vegan_div{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    font-size: 13px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Menu_expanded_veganTag.red{
+    color: red;
+}
+.Menu_expanded_veganTag.green{
+    color: green;
+}
+.Menu_expanded_foods_description{
+    margin-top: 15px;
+    text-align: justify;
+    font-size: 14px;
+}
+.Menu_expanded_foods_nutrition_price_tag{
+    margin-top: 15px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    
+
+}
+.Menu_expanded_foods_nutrition_info{
+    font-size: 12px;
+}
+.Menu_expanded_foods_price_info{
+    font-weight: bold;
+}
+.Menu_expanded_foodCard_buttons_div{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Menu_expanded_Back_button,.Menu_expanded_AddToCart_button{
+    padding: 8px 13px 7px 11px;
+    border: 3px solid transparent;
+    border-radius: 15px;
+    background-color: var(--orange-colour);
+    color: #ffffff;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+    .offers{
+        margin-top: 70px;
+    }
+    .offers>h1{
+        color: var(--orange-colour);
+        text-align: center;
+    }
+    .offers-main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        justify-content: center;
+        gap: 20px;
+    }
+    .offers-1>img{
+        height: clamp(10rem,40vw,50rem);
+        border-radius: 15px;
+    }
+    .offers-sub{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        justify-content: center;
+        gap: 20px;
+    }
+    .offers-2 img{
+        height: 100px;
+        width:clamp(10rem,40vw,50rem);
+        border-radius: 15px;
+    }
+    .offers-3 img{
+        height: 100px;
+        width: clamp(10rem,40vw,50rem);
+        border-radius: 15px;
+    }
+
+
+
+
+    .reviews{
+    margin-top: 90px;
+}
+.reviews>h1{
+    color:var(--orange-colour);
+    font-style: italic;
+    text-align: center;
+
+}
+.reviews_TotalDiv{
+    width: 100%;
+    margin-top: 20px;
+    background-color: pink;
+    padding: 60px 30px;
+    display: flex;
+    row-gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0px 0px 10px rgb(118, 118, 118);
+}
+.review1,.review3{
+   
+    width: 80%;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    background-color: white;
+    padding: 20px 30px;
+    box-shadow: 0px 0px 10px rgb(118, 118, 118);
+
+}
+.review2{
+    display: block;
+   
+    width: 100%;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    background-color: white;
+    padding: 20px 30px;
+    box-shadow: 0px 0px 10px rgb(118, 118, 118);
+
+}
+.reviews img{
+    border-radius: 50%;
+    border: 2px solid black;
+    width: 30px;
+}
+.User_logo_review{
+    border-radius: 50%;
+    background-color: skyblue;
+    border: 2px solid black;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+}
+.img_name_div_review1,.img_name_div_review2,.img_name_div_review3{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 16px;
+}
+.review1_namestar_div,.review2_namestar_div,.review3_namestar_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.review3_name,.review2_name,.review1_name{
+    font-size: 16px;
+}
+.review_ratings{
+    text-align: start;
+    font-size: 12px;
+}
+.review2_ratings{
+    text-align: start;
+    font-size: 12px;
+}
+.review1_text,.review2_text,.review3_text{
+    margin-top: 15px;
+    text-align: justify;
+    text-indent: 30px; 
+    font-size: 13px;
+}
+.GiveUsReviewCard{
+    display: none;
+    position: relative;
+    flex-direction: column;
+    background-color: antiquewhite;
+    border-radius: 25px;
+    padding: 40px;
+    box-shadow: 0 0 20px gray;
+}
+.GiveUsReviewCard h2{
+    color:var(--orange-colour);
+    text-align: center;
+}
+.GiveUsReview_nameDiv{
+    margin-top: 30px;
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: inset 5px 5px 2px #c3c3c3,inset -5px -5px 2px #ffffffff;;
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+}
+.GiveUsReview_nameDiv i{
+    margin-left: 5px;
+    color: var(--orange-colour);
+}
+.GiveUsReview_nameDiv>input{
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    padding-left: 5px;
+    font-size: 18px;
+}
+.GiveUsReview_nameDiv>input::placeholder{
+    color: rgb(164, 164, 164);
+    font-weight: 400;
+    font-size: 16px;
+}
+.GiveUsReview_starRatings{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+}
+.GiveUsReview_starRatings div{
+    border: 2px solid black;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.star2_review.selected,.star3_review.selected,.star4_review.selected{
+    border: 2px solid black;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+}
+.star1_review{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.star1_review.selected{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: black;
+    color: white;
+}
+.star5_review{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.star5_review.selected{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: black;
+    color: white;
+
+}
+.Review_of_user{
+    height: 150px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 25px;
+    padding: 10px;
+    resize: none;
+}
+.GiveUsReview_Submitbutton{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.Close_giveUsReview{
+    background-color: red;
+    padding: 4px 15px;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+.Submit_giveUsReview{
+    background-color: blue;
+    padding: 4px 15px;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+.GiveUsReview_Notification{
+    position: absolute;
+    top: -50px;
+    right: 50%;
+    width: 300px;
+    transform: translate(50%,50%);
+    display: none;
+    text-align: center;
+    padding: 3px 15px;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    border-radius: 25px;
+}
+
+
+
+
+
+
+
+    .footer{
+        margin-top: 60px;
+        border-top: 4px dashed var(--orange-colour);
+        padding: 50px 20px 60px 20px;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        row-gap: 50px;
+        column-gap: 40px;
+        justify-content: space-around;
+        background-color: antiquewhite;
+    }
+    .footer>div{
+        text-align: center;
+    }
+    .span{
+        font-size: 20px;
+        font-weight: bold;  
+    }
+    .footer_taskbar_div,.footer_info_div,.footer_contact_div{
+        font-size: 14px;
+    }
+    .footer span{
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        color: var(--orange-colour);
+    }
+    .footer-contact-apps{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 20px;
+    }
+    .Location_tittle{
+        font-size: 18px;
+    }
+    .locate_us_div iframe{
+    margin-top: 20px;
+    border-radius: 15px;
+    width: 250px;
+    height: 450px;
+}
+.Complaint_card{
+    display: flex;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid red;
+    background-color: antiquewhite;
+    border-radius: 30px;
+    padding: 30px;
+    width: 350px;
+    box-shadow: 0px 0px 20px rgb(144, 144, 144);
+}
+.Complaint_card h2{
+    color: var(--orange-colour);
+}
+.Complaint_Image_Input{
+    margin-top: 20px;
+}
+.Complaint_card>p{
+    font-size: 12px;
+}
+.Complaint_Image_div{
+    margin-top: 10px;
+    position: relative;
+    display: none;
+}
+.Complaint_Image{
+    height: 80px;
+    border-radius: 20px;
+}
+.Remove_Complaint_Image{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 2px;
+    right: 2px;
+    line-height: 1;
+    height: 15px;
+    width: 15px;
+    font-weight: bold;
+    background-color: rgb(151, 151, 151);
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+.Complaint_input{
+    margin-top: 20px;
+    resize: none;
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+}
+.Complaints_buttonsDiv{
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.Complaints_Cancel_buttons{
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    padding: 5px 20px;
+    border: 2px solid transparent;
+    border-radius: 30px;
+}
+.Complaints_Submit_buttons{
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    padding: 5px 20px;
+    border: 2px solid transparent;
+    border-radius: 30px;
+}
+.Complaint_contact_info_Email,.Complaint_contact_info{
+    display: flex;
+    font-size: 12px;
+}
+.Complaint_contact_info_Email{
+    margin-left: 5px;
+}
+.Complaint_notification{
+    position: absolute;
+    top: -70px;
+    right: 50%;
+    transform: translate(50%,50%);
+    display: none;
+    text-align: center;
+    background-color: green;
+    color: white;
+    width: 350px;
+    font-weight: bold;
+    padding: 5px 20px;
+    border: 2px solid transparent;
+    border-radius: 30px;
+}
+}
+/* animations $%@^#$#%@$#%!#$@%$#!%$!#% */
+.homepic img{
+    animation: rotate 55s linear infinite;
+}
+
+
+@keyframes rotate{
+    to{transform: rotateZ(360deg);}
+}
+/* $$%$%$$% LINKS AND BUTTONS $%%$%$%$%$ */
+.nav_links>li{
+    position: relative;
+}
+.nav_links>li::after{
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 50%;
+    background-color: var(--orange-colour);
+    transform: scaleX(0);
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
+}
+.nav_links>li:hover::after{
+    transform: scaleX(1);
+}
+.footer a{
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in;
+}
+.footer a:hover{
+    color: var(--orange-colour);
+}
+.drop-links a:hover{
+    background-color: var(--orange-colour);
+    border-color: var(--orange-colour);
+}
+.drop-links a:hover li{
+    color: white;
+}
+.fa-cart-shopping:active,
+.fa-arrow-right-to-bracket:active,
+#home2_order_button:active,
+.footer>div a:active{
+    color: var(--dark-orange-colour);
+}
+.OrderNow:hover,
+.menu_topic_button:hover,
+.BuyNow_But:hover{
+    cursor: pointer;
+}
+.OrderNow:active,
+.menu_topic_button:active,
+.BuyNow_But:active,
+.drop-links a:active{
+    border-color: var(--dark-orange-colour);
+    background-color: var(--dark-orange-colour);
+}
+.trackOrder:active{
+    color: var(--dark-orange-colour);
+    border-color: var(--dark-orange-colour);
+}
+.login_submit_button:active,.register_submit_button:active{
+    background-color: rgb(22, 22, 150);
+}
+.login_close_button:active,.register_close_button:active{
+    background-color: rgb(185, 15, 15);
+}
+.register_page_text_div a:hover,.login_page_text_div a:hover{
+    cursor: pointer;
+    color: rgb(53, 53, 248);
+}
+.register_page_text_div a:active,.login_page_text_div a:active{
+    color: rgb(3, 3, 146);
+}
+.login_link:hover,.register_link:hover{
+    color: var(--orange-colour);
+}
+.login_link:active,.register_link:active{
+    color: var(--dark-orange-colour);
+}
+.login_link:visited,.register_link:visited,.register_page_text_div a:visited,.login_page_text_div a:visited{
+    color: rgb(195, 29, 255);
+}
+
+.home2-foods-1:hover img,.home2-foods-2:hover img,.home2-foods-3:hover img{
+    transform: scale(1.1);
+
+}
+.food-menu>div:hover img{
+    transform: scale(1.1);
+}
+@keyframes foodsup{
+    from{transform: scale(1);}
+    to{transform: scale(1.1);}
+}
+@keyframes foodsdown{
+    from{transform: scale(1.1);}
+    to{transform: scale(1);}
+}
+
+
+
