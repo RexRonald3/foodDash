@@ -1478,7 +1478,7 @@ marquee{
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    box-shadow: 0px 0px 10px rgb(118, 118, 118);
+ 
 }
 .review1,.review3{
     height: 300px;
@@ -2757,7 +2757,7 @@ marquee{
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    box-shadow: 0px 0px 10px rgb(118, 118, 118);
+    
 }
 .review1,.review3{
     height: 300px;
@@ -4115,7 +4115,7 @@ marquee{
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    box-shadow: 0px 0px 10px rgb(118, 118, 118);
+
 }
 .review1,.review3{
    
@@ -5485,7 +5485,7 @@ marquee{
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    box-shadow: 0px 0px 10px rgb(118, 118, 118);
+ 
 }
 .review1,.review3{
    

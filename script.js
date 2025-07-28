@@ -78,6 +78,7 @@ function NavToLoginForm(){
     document.getElementById("register_name_input").value="";
     document.getElementById("register_email_input").value="";
     document.getElementById("register_password_input").value="";
+    document.querySelector(".privacyPolicy_Checkbox").checked=false;
     const register_checker=document.querySelector(".register_checker");
     register_checker.style.display = 'none';
     login_Background.style.display='flex';
@@ -91,6 +92,7 @@ function CloseRegisterForm(event){
     document.getElementById("register_name_input").value="";
     document.getElementById("register_email_input").value="";
     document.getElementById("register_password_input").value="";
+    document.querySelector(".privacyPolicy_Checkbox").checked=false;
     const register_checker=document.querySelector(".register_checker");
     register_checker.style.display = 'none';
     login_Background.style.display='none';
@@ -102,18 +104,42 @@ function CloseRegisterForm(event){
 
 }
 let Complaint_Email;
+let nameRegex;
+let emailRegex;
+let passwordRegex;
+
 function RegisterSubmit(event){
     if(event) event.preventDefault();
 
     const Register_Name=document.getElementById("register_name_input").value.trim();
     const Register_email=document.getElementById("register_email_input").value;
     const Register_password=document.getElementById("register_password_input").value;
+    let privacyPolicy_Checkbox=document.querySelector(".privacyPolicy_Checkbox");
     const Register_checker=document.querySelector(".register_checker");
-    if (!Register_Name || !Register_email || !Register_password) {
-        Register_checker.textContent="Fill all the inputs correctly !";
+    nameRegex = /^[A-Za-z ]{3,}$/;
+    emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
+
+    if (!nameRegex.test(Register_Name)){
+        Register_checker.textContent="Name must be atleast 3 Char (only Alphabets)";
         Register_checker.style.display = 'block';
-        return; // stop further execution
+        return;
+    }
+    else if(!emailRegex.test(Register_email)){
+        Register_checker.textContent="Please enter a valid email address !";
+        Register_checker.style.display = 'block';
+        return;
+    }
+    else if(!passwordRegex.test(Register_password)) {
+        Register_checker.textContent="Password - Min. 6 char (Min.1 letter & 1 number)";
+        Register_checker.style.display = 'block';
+        return; 
     } 
+    else if(!privacyPolicy_Checkbox.checked){
+        Register_checker.textContent="You must agree to the privacy policy";
+        Register_checker.style.display = 'block';
+        return;
+    }
     LOGGEDIN=true;
     
     const Register_Name_FirstLetter=Register_Name.charAt(0).toUpperCase();
@@ -156,6 +182,7 @@ function CloseLoginForm(event){
     document.getElementById("login_name_input").value="";
     document.getElementById("login_email_input").value="";
     document.getElementById("login_password_input").value="";
+    document.querySelector(".privacyPolicy_Checkbox").checked=false;
     const Login_checker=document.querySelector(".Login_checker");
     Login_checker.style.display = 'none';
     register_form.style.display='none';
@@ -174,11 +201,25 @@ function LoginSubmit(event){
     const Login_email=document.getElementById("login_email_input").value;
     const Login_password=document.getElementById("login_password_input").value;
     const Login_checker=document.querySelector(".Login_checker");
-    if (!Login_Name || !Login_email || !Login_password) {
-        Login_checker.textContent="Fill all the inputs correctly !";
+    nameRegex = /^[A-Za-z ]{3,}$/;
+    emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
+    if (!nameRegex.test(Login_Name)){
+        Login_checker.textContent="Please enter the registered username";
         Login_checker.style.display = 'block';
-        return; // stop further execution
+        return;
+    }
+    else if(!emailRegex.test(Login_email)){
+        Login_checker.textContent="Please enter the registered email address !";
+        Login_checker.style.display = 'block';
+        return;
+    }
+    else if(!passwordRegex.test(Login_password)) {
+        Login_checker.textContent="Please enter the correct password !";
+        Login_checker.style.display = 'block';
+        return; 
     } 
+
     LOGGEDIN=true;
     
     const Login_Name_FirstLetter=Login_Name.charAt(0).toUpperCase();
