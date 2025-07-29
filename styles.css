@@ -5571,7 +5571,7 @@ marquee{
     margin-top: 30px;
     border-radius: 30px;
     background-color: white;
-    box-shadow: inset 5px 5px 2px #c3c3c3,inset -5px -5px 2px #ffffffff;;
+    box-shadow: inset 5px 5px 2px #c3c3c3,inset -5px -5px 2px #ffffffff;
     padding: 8px 10px;
     display: flex;
     align-items: center;
@@ -5897,9 +5897,7 @@ marquee{
     color: var(--dark-orange-colour);
     border-color: var(--dark-orange-colour);
 }
-.login_submit_button:active,.register_submit_button:active{
-    background-color: rgb(22, 22, 150);
-}
+
 .login_close_button:active,.register_close_button:active{
     background-color: rgb(185, 15, 15);
 }
@@ -5936,5 +5934,67 @@ marquee{
     to{transform: scale(1);}
 }
 
+.BuyNow_But:hover,.menu_topic_button:hover,.login_submit_button:hover,.register_submit_button:hover{
+    background-color: rgb(255, 123, 29);
+    border-color: rgb(255, 123, 29);
 
+}
+.BuyNow_But:active,.menu_topic_button:active,.login_submit_button:active,.register_submit_button:active{
+    background-color: rgb(187, 78, 0);
+    border-color: rgb(187, 78, 0);
+}
+#home2_order_button:hover{
+    color: rgb(255, 123, 29);
+}
+#home2_order_button:active{
+    color: rgb(187, 78, 0);
+}
+.review1,.review2,.review3{
+    transition: transform 0.4s ease;
+}
+.review1:hover,.review2:hover,.review3:hover{
+    transform: scale(1.05);
+}
+.fa-arrow-right-to-bracket{
+    cursor: pointer;
+}
+.fa-linkedin,.fa-square-github,.fa-circle-user,.fa-instagram{
+    transition: transform 0.4s ease;
+    cursor: pointer;
+}
+.fa-linkedin{
+    color: rgb(0, 89, 255);
 
+}
+.fa-square-github{
+    color: rgb(0, 0, 0);    
+}
+.fa-circle-user{
+    color: rgb(13, 0, 255);
+}
+.fa-instagram{
+    color: rgb(255, 0, 136);
+}
+
+.fa-linkedin:hover{
+    transform: scale(1.2);
+}
+.fa-square-github:hover{
+    transform: scale(1.2);
+
+}
+.fa-circle-user:hover{
+    transform: scale(1.2);
+
+}
+.fa-instagram:hover{
+    transform: scale(1.2);
+
+    
+}
+.trackOrder,.OrderNow{
+    transition: transform 0.4s ease;
+}
+.OrderNow:hover,.trackOrder:hover{
+    transform: scale(1.1);
+}
