@@ -5998,3 +5998,33 @@ marquee{
 .OrderNow:hover,.trackOrder:hover{
     transform: scale(1.1);
 }
+.home2_expanded_AddToCart_button:hover,.Menu_expanded_AddToCart_button:hover,.home2_expanded_Back_button:hover,
+.Menu_expanded_Back_button:hover,.final_card_discount_EnterIcon_div:hover,.final_card_placeOrder_button:hover,
+.logout_button:hover,.LargeProfile_Fav_Button:hover{
+    background-color: rgb(255, 123, 29);
+    border-color: rgb(255, 123, 29);
+}
+.home2_expanded_AddToCart_button:active,.Menu_expanded_AddToCart_button:active,.home2_expanded_Back_button:active,
+.Menu_expanded_Back_button:active,
+.final_card_discount_EnterIcon_div:active,.final_card_placeOrder_button:active,.logout_button:active,.LargeProfile_Fav_Button:active{
+    background-color: rgb(187, 78, 0);
+    border-color: rgb(187, 78, 0);
+}
+.HomeScreen_viewCart:hover{
+    background-color: rgb(0, 208, 0);
+
+}
+.HomeScreen_viewCart:active{
+    background-color: rgb(0, 133, 0);
+
+}
+.Detailstext_Icon_div:hover{
+    color: rgb(102, 102, 255);
+}
+.Detailstext_Icon_div:active{
+    color:rgb(0, 0, 100);
+}
+.Cart_Item_Remove_button:hover{
+    background-color: red;
+    color: white;
+}

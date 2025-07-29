@@ -136,7 +136,7 @@ function RegisterSubmit(event){
         return; 
     } 
     else if(!privacyPolicy_Checkbox.checked){
-        Register_checker.textContent="You must agree to the privacy policy";
+        Register_checker.textContent="You must agree to our privacy policy";
         Register_checker.style.display = 'block';
         return;
     }
@@ -280,6 +280,7 @@ function Open_RefundPolicy(){
 }
 
 function Open_ForgotPassword(){
+    
     privacyPolicy_background.style.display="flex";
     forgotPassword_display.style.display="flex";
 }
@@ -290,21 +291,35 @@ function Close_ForgotPassword(){
     forgotPassword_display.style.display="none";
 }
 function ForgotPassword_linkSending(){
+    emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     let ForgotPassword_email_input_value=document.querySelector("#ForgotPassword_email_input").value;
-    if(ForgotPassword_email_input_value){
+    if(!ForgotPassword_email_input_value){
         document.querySelector(".ForgotPassword_Notification").style.display="flex";
-        document.querySelector(".ForgotPassword_Notification").innerText=`A Password reset link has been sent to ${ForgotPassword_email_input_value}.`;
-        document.querySelector("#ForgotPassword_email_input").value='';
-        setTimeout(() => {
-            document.querySelector(".ForgotPassword_Notification").style.display="none";
-        }, 2500);
-    }
-    else{
-        document.querySelector(".ForgotPassword_Notification").style.display="flex";
+        document.querySelector(".ForgotPassword_Notification").style.backgroundColor="red";
         document.querySelector(".ForgotPassword_Notification").innerText=`Please Enter Your Registered Email.`;
         setTimeout(() => {
             document.querySelector(".ForgotPassword_Notification").style.display="none";
         }, 1500);
+        return;
+    }
+    else if(!emailRegex.test(ForgotPassword_email_input_value)){
+        document.querySelector(".ForgotPassword_Notification").style.display="flex";
+        document.querySelector(".ForgotPassword_Notification").style.backgroundColor="red";
+        document.querySelector(".ForgotPassword_Notification").innerText=`The Email you entered is not valid`;
+        setTimeout(() => {
+            document.querySelector(".ForgotPassword_Notification").style.display="none";
+        }, 1500);
+        return; 
+    }
+    else{
+        document.querySelector(".ForgotPassword_Notification").style.display="flex";
+        document.querySelector(".ForgotPassword_Notification").style.backgroundColor="green";
+        document.querySelector(".ForgotPassword_Notification").innerText=`A Password reset link has been sent to ${ForgotPassword_email_input_value}.`;
+        
+        setTimeout(() => {
+            document.querySelector(".ForgotPassword_Notification").style.display="none";
+            Close_ForgotPassword();
+        }, 3000);
     }
 
 }
@@ -673,11 +688,23 @@ function Click_To_Favourites_home2(){
         Fav_Object[Favourite_item]=true;
         document.querySelector("#Cross_Expanded_home2_FoodCard").style.color="red";
         document.querySelector(".home2_ExpandedCard_notification").style.display='flex';
+        document.querySelector(".home2_ExpandedCard_notification").style.backgroundColor='red';
+        document.querySelector(".home2_ExpandedCard_notification").innerHTML='Added to Favorites!!!';
+        setTimeout(() => {
+            document.querySelector(".home2_ExpandedCard_notification").style.backgroundColor='green';
+            document.querySelector(".home2_ExpandedCard_notification").innerHTML='';
+            document.querySelector(".home2_ExpandedCard_notification").style.display='none';
+        }, 800);
+    }
+    else{
+        Fav_Object[Favourite_item]=false;
+        document.querySelector("#Cross_Expanded_home2_FoodCard").style.color="black";
+        document.querySelector(".home2_ExpandedCard_notification").style.display='flex';
         document.querySelector(".Menu_ExpandedCard_notification").style.display="flex";
         document.querySelector(".home2_ExpandedCard_notification").style.backgroundColor='red';
         document.querySelector(".Menu_ExpandedCard_notification").style.backgroundColor='red';
-        document.querySelector(".home2_ExpandedCard_notification").innerHTML='Added to Favorites!!!';
-        document.querySelector(".Menu_ExpandedCard_notification").innerHTML="Added to Favorites!!!";
+        document.querySelector(".home2_ExpandedCard_notification").innerHTML='Removed from Favorites!!!';
+        document.querySelector(".Menu_ExpandedCard_notification").innerHTML="Removed from Favorites!!!";
         setTimeout(() => {
             document.querySelector(".home2_ExpandedCard_notification").style.backgroundColor='green';
             document.querySelector(".Menu_ExpandedCard_notification").style.backgroundColor='green';
@@ -687,20 +714,33 @@ function Click_To_Favourites_home2(){
             document.querySelector(".Menu_ExpandedCard_notification").style.display="none";
         }, 800);
     }
-    else{
-        Fav_Object[Favourite_item]=false;
-        document.querySelector("#Cross_Expanded_home2_FoodCard").style.color="black";
-    }
 }
 function Click_To_Favourites_Menu(){
     if(Fav_Object[Favourite_item]==false){
         Fav_Object[Favourite_item]=true;
         document.querySelector("#Cross_Expanded_Menu_FoodCard").style.color="red";
+        document.querySelector(".Menu_ExpandedCard_notification").style.display="flex";
+        document.querySelector(".Menu_ExpandedCard_notification").style.backgroundColor='red';
+        document.querySelector(".Menu_ExpandedCard_notification").innerHTML="Added to Favorites!!!";
+        setTimeout(() => {
+            document.querySelector(".Menu_ExpandedCard_notification").style.backgroundColor='green';
+            document.querySelector(".Menu_ExpandedCard_notification").innerHTML="";
+            document.querySelector(".Menu_ExpandedCard_notification").style.display="none";
+        }, 800);
     }
     else{
         Fav_Object[Favourite_item]=false;
         document.querySelector("#Cross_Expanded_Menu_FoodCard").style.color="black";
+        document.querySelector(".Menu_ExpandedCard_notification").style.display="flex";
+        document.querySelector(".Menu_ExpandedCard_notification").style.backgroundColor='red';
+        document.querySelector(".Menu_ExpandedCard_notification").innerHTML="Removed from Favorites!!!";
+        setTimeout(() => {
+            document.querySelector(".Menu_ExpandedCard_notification").style.backgroundColor='green';
+            document.querySelector(".Menu_ExpandedCard_notification").innerHTML="";
+            document.querySelector(".Menu_ExpandedCard_notification").style.display="none";
+        }, 800);
     }
+    
 }
 function Add_To_Favourites_home2(item){
     if(Fav_Object[item]==false){
